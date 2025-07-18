@@ -1,14 +1,20 @@
 [
   {
-    "company": "--",
-    "title": "--",
-    "year": "--",
+    "company": "Global Knowledge Academy (GKA)",
+    "title": "Computer System Servicing - [Intern]",
+    "year": "Sept 2016 - Sept 2016",
     "description": "--"
   },
   {
-    "company": "--",
-    "title": "--",
-    "year": "--",
+    "company": "City Government of Angeles (ACTDO)",
+    "title": "Data Analysis - [Office Worker II]",
+    "year": "Oct 2017 – Jun 2020",
+    "description": "--"
+  },
+  {
+    "company": "City Government of Angeles (ACTDO)",
+    "title": "System Developer [Office Worker V]",
+    "year": "Jul 2020 – Dec 2022",
     "description": "--"
   }
 ]
