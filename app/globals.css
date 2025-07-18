@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.bento-card {
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid;
+}
