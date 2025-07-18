@@ -1,5 +1,6 @@
 // components/About.tsx
 import * as motion from "motion/react-client";
+import aboutData from "@/data/about.json";
 
 export const About = () => {
   return (
@@ -13,15 +14,14 @@ export const About = () => {
       <h2 className="text-2xl font-bold mb-4 border-b border-gray-800 pb-2">
         About
       </h2>
-      <p className="text-gray-300 text-sm leading-relaxed space-y-4">
-        --
-        <br />
-        <br />
-        --
-        <br />
-        <br />
-        --
-      </p>
+      {aboutData.map((about, abid) => (
+        <p
+          key={abid}
+          className="text-gray-300 text-sm leading-relaxed space-y-4"
+        >
+          {about.aboutData}
+        </p>
+      ))}
     </motion.section>
   );
 };
