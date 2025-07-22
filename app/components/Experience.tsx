@@ -18,10 +18,8 @@ const Experience = () => {
         {experinces.map((exp, idx) => (
           <div key={idx} className="bg-gray-800 p-4 rounded">
             <h3 className="text-sm font-semibold">{exp.title}</h3>
-            <p className="text-sm text-yellow-400">
-              {exp.company} · {exp.year}
-            </p>
-            <p className="text-sm text-gray-300 mt-1">{exp.description}</p>
+            <p className="text-sm text-yellow-400">{exp.company}</p>
+            <p className="text-sm text-gray-300 mt-1">{exp.year}</p>
           </div>
         ))}
       </div>

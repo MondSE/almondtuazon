@@ -1,12 +1,58 @@
 [
   {
-    "title": "--",
-    "issuer": "--",
-    "year": "--"
+    "id": 1,
+    "title": "Introduction to Packet Tracer",
+    "issuer": "Cisco Networking Academy",
+    "year": "--",
+    "link": "#"
   },
   {
-    "title": "--",
-    "issuer": "--",
-    "year": "--"
+    "id": 2,
+    "title": "Partner: CPA - Programming Essentials in C++",
+    "issuer": "Cisco Networking Academy",
+    "year": "--",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "title": "Partner: CPP - Advanced Programming in C++",
+    "issuer": "Cisco Networking Academy",
+    "year": "--",
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "title": "CCNAv7: Introduction to Networks",
+    "issuer": "Cisco Networking Academy",
+    "year": "--",
+    "link": "#"
+  },
+  {
+    "id": 5,
+    "title": "Introduction to Cybersecurity",
+    "issuer": "Cisco Networking Academy",
+    "year": "--",
+    "link": "#"
+  },
+  {
+    "id": 6,
+    "title": "SQL",
+    "issuer": "TestDome",
+    "year": "--",
+    "link": "#"
+  },
+  {
+    "id": 7,
+    "title": "PHP",
+    "issuer": "TestDome",
+    "year": "--",
+    "link": "#"
+  },
+  {
+    "id": 8,
+    "title": "JavaScript",
+    "issuer": "TestDome",
+    "year": "--",
+    "link": "#"
   }
 ]
