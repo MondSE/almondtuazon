@@ -1,6 +1,7 @@
 import React from "react";
 import * as motion from "motion/react-client";
 import projects from "@/data/project.json";
+import Link from "next/link";
 
 const Projects = () => {
   return (
@@ -14,7 +15,7 @@ const Projects = () => {
       <h2 className="text-2xl font-bold mb-6 border-b border-gray-800 pb-2">
         Projects
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
         {projects.map((proj, idx) => (
           <a
             href={proj.link}
@@ -32,6 +33,26 @@ const Projects = () => {
                   {tech}
                 </span>
               ))}
+            </div>
+            <div className="flex gap-4 mt-2">
+              <Link
+                href={"#"}
+                className="bg-black text-white text-xs px-4 py-1 rounded-full shadow hover:scale-105 transition-transform "
+              >
+                <span>Docs</span>
+              </Link>
+              <Link
+                href={"#"}
+                className="bg-black text-white text-xs px-4 py-1 rounded-full shadow hover:scale-105 transition-transform "
+              >
+                <span>Image</span>
+              </Link>
+              <Link
+                href={"#"}
+                className="bg-black text-white text-xs px-4 py-1 rounded-full shadow hover:scale-105 transition-transform "
+              >
+                <span>GitHub</span>
+              </Link>
             </div>
           </a>
         ))}

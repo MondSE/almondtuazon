@@ -1,8 +1,8 @@
 [
   {
-    "name": "--",
-    "description": "--",
-    "tech": ["--", "--", "--"],
+    "name": "ACTDO - IMS",
+    "description": "Information Management System for Angeles City Traffic Development Office",
+    "tech": ["PHP", "Bootstrap", "JavaScript", "SQL", "XAMPP"],
     "link": "#"
   },
   {
