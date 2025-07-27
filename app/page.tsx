@@ -24,7 +24,7 @@ export default function Home() {
         <TechStack />
         <Projects />
         <Certifications />
-        <Recommendation />
+        {/* <Recommendation /> */}
         <SocialLinks />
         <BlogPosts />
       </section>

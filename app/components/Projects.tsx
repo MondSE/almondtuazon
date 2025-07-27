@@ -5,7 +5,7 @@ import projects from "@/data/project.json";
 const Projects = () => {
   return (
     <motion.section
-      className="bento-card p-4 col-span-1 md:col-span-6 space-y-2 group"
+      className="bento-card p-4 col-span-1 md:col-span-3 space-y-2 group"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
