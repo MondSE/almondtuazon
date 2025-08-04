@@ -17,8 +17,7 @@ const Projects = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
         {projects.map((proj, idx) => (
-          <a
-            href={proj.link}
+          <div
             key={idx}
             className="block bg-gray-800 p-4 rounded hover:shadow-lg transition"
           >
@@ -36,7 +35,7 @@ const Projects = () => {
             </div>
             <div className="flex gap-4 mt-2">
               <Link
-                href={"#"}
+                href={`/projects/${idx + 1}`}
                 className="bg-black text-white text-xs px-4 py-1 rounded-full shadow hover:scale-105 transition-transform "
               >
                 <span>Docs</span>
@@ -54,7 +53,7 @@ const Projects = () => {
                 <span>GitHub</span>
               </Link>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </motion.section>
