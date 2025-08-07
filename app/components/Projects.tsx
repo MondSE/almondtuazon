@@ -35,7 +35,7 @@ const Projects = () => {
             </div>
             <div className="flex gap-4 mt-2">
               <Link
-                href={`/projects/${idx + 1}`}
+                href={`/projects/view/${idx + 1}`}
                 className="bg-black text-white text-xs px-4 py-1 rounded-full shadow hover:scale-105 transition-transform "
               >
                 <span>Docs</span>
@@ -55,6 +55,9 @@ const Projects = () => {
             </div>
           </div>
         ))}
+        <Link href={"/projects/list"}>
+          <p className=" text-sm text-blue-400 hover:underline">View More</p>
+        </Link>
       </div>
     </motion.section>
   );

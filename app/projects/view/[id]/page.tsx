@@ -3,75 +3,76 @@ import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import * as motion from "motion/react-client";
 import Link from "next/link";
+import data from "@/data/project.json";
 
-const data = [
-  {
-    id: 1,
-    header: "ACTDO",
-    title: "ACTDO Mangement Information System",
-    techStack: ["html", "css", "js", "MySql", "Xampp"],
-    githubLink: "https://github.com/MondSE/ACTDO-IMS-DEMO",
-    projectSummary:
-      "This project is used as a template for the demonstration of the information management system of ACTDO as a Projects using the PHP native and Sql on Xampp to be clear there are no ACTDO valuable data exposed to upload this template.",
-    sampleImageProject: ["none"],
-    aim: [
-      "This software is to automate these processes and to improve the overall efficiency and clients experience of Office.",
-      "The system is easy to use and has user-friendly functionalities to help the employee's for their daily transactions.",
-    ],
-    technologiesUsed: [
-      {
-        frontEnd:
-          " HTML, CSS, JavaScript and Bootstrap for the user interface.",
-        backEnd: " PHP with the Xampp to handle application logic and APIs.",
-        dataBase:
-          " MySQL to store user data, routines and queries to the virtual assistant.",
-      },
-    ],
-    dataBaseDiagram: "image",
-    implementation: [
-      {
-        frontEnd: [
-          "Development of a clean and dynamic user dashboard for creating, editing, and viewing exercise routines.",
-          "Integration of interactive graphics to display physical progress.",
-        ],
-        backEnd: ["Implementation of endpoints for CRUD routines."],
-        dataBase: [
-          "Designing tables for users, exercises, and queries with normalized relationships.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 2,
-    header: "ACtdo",
-    title: "hello",
-    techStack: ["html", "css", "js", "MySql"],
-    githubLink: "/",
-    projectSummary: "explain ko muna",
-    sampleImageProject: ["none", "none", "none", "none"],
-    aim: ["none", "none", "none"],
-    technologiesUsed: [
-      {
-        frontEnd: "asasdasdccc",
-        backEnd: "asdasdasdccc",
-        dataBase: "asdasdasdcccc",
-      },
-    ],
-    dataBaseDiagram: "image",
-    implementation: [
-      {
-        frontEnd: [
-          "Development of a clean and dynamic user dashboard for creating, editing, and viewing exercise routines.",
-          "Integration of interactive graphics to display physical progress.",
-        ],
-        backEnd: ["Implementation of endpoints for CRUD routines."],
-        dataBase: [
-          "Designing tables for users, exercises, and queries with normalized relationships.",
-        ],
-      },
-    ],
-  },
-];
+// const data = [
+//   {
+//     id: 1,
+//     header: "ACTDO",
+//     title: "ACTDO Mangement Information System",
+//     techStack: ["html", "css", "js", "MySql", "Xampp"],
+//     githubLink: "https://github.com/MondSE/ACTDO-IMS-DEMO",
+//     projectSummary:
+//       "This project is used as a template for the demonstration of the information management system of ACTDO as a Projects using the PHP native and Sql on Xampp to be clear there are no ACTDO valuable data exposed to upload this template.",
+//     sampleImageProject: ["none"],
+//     aim: [
+//       "This software is to automate these processes and to improve the overall efficiency and clients experience of Office.",
+//       "The system is easy to use and has user-friendly functionalities to help the employee's for their daily transactions.",
+//     ],
+//     technologiesUsed: [
+//       {
+//         frontEnd:
+//           " HTML, CSS, JavaScript and Bootstrap for the user interface.",
+//         backEnd: " PHP with the Xampp to handle application logic and APIs.",
+//         dataBase:
+//           " MySQL to store user data, routines and queries to the virtual assistant.",
+//       },
+//     ],
+//     dataBaseDiagram: "image",
+//     implementation: [
+//       {
+//         frontEnd: [
+//           "Development of a clean and dynamic user dashboard for creating, editing, and viewing exercise routines.",
+//           "Integration of interactive graphics to display physical progress.",
+//         ],
+//         backEnd: ["Implementation of endpoints for CRUD routines."],
+//         dataBase: [
+//           "Designing tables for users, exercises, and queries with normalized relationships.",
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     header: "ACtdo",
+//     title: "hello",
+//     techStack: ["html", "css", "js", "MySql"],
+//     githubLink: "/",
+//     projectSummary: "explain ko muna",
+//     sampleImageProject: ["none", "none", "none", "none"],
+//     aim: ["none", "none", "none"],
+//     technologiesUsed: [
+//       {
+//         frontEnd: "asasdasdccc",
+//         backEnd: "asdasdasdccc",
+//         dataBase: "asdasdasdcccc",
+//       },
+//     ],
+//     dataBaseDiagram: "image",
+//     implementation: [
+//       {
+//         frontEnd: [
+//           "Development of a clean and dynamic user dashboard for creating, editing, and viewing exercise routines.",
+//           "Integration of interactive graphics to display physical progress.",
+//         ],
+//         backEnd: ["Implementation of endpoints for CRUD routines."],
+//         dataBase: [
+//           "Designing tables for users, exercises, and queries with normalized relationships.",
+//         ],
+//       },
+//     ],
+//   },
+// ];
 
 export default function ProjectDetail() {
   const params = useParams(); // Get route parameters
@@ -117,15 +118,37 @@ export default function ProjectDetail() {
   //     }
   //   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        duration: 1.8,
+      },
+    },
+  };
+
   const itemVariants = {
     hidden: { opacity: 0, y: 10 },
     show: { opacity: 1, y: 0 },
     transition: { duration: 1.8 },
   };
 
+  // Outside the JSX
+  const handleImageClick = (src: string) => {
+    // your modal opening logic here
+    // e.g., setModalImage(src), setShowModal(true)
+  };
+
   return (
     <>
-      <div className=" contianer px-4 pt-20 lg:pt-32 mx-auto max-w-screen-lg">
+      <motion.section
+        className="page-transition mx-auto px-4 py-8"
+        initial="hidden"
+        animate="show"
+        variants={containerVariants}
+      >
         <div className=" flex items-center gap-4 mb-8">
           <motion.div variants={itemVariants}>
             <Link
@@ -137,13 +160,13 @@ export default function ProjectDetail() {
           </motion.div>
         </div>
         <h1 className=" text-3xl lg:text-5xl mb-5 font-bold">
-          {project.title}
+          {project.description}
         </h1>
         <div className=" flex gap-2 mt-5">
           <div className="mb-10">
-            <h3 className="text-pretty text-text-100/60">Technologies:</h3>
+            <h3 className="text-pretty text-text-100/60 mb-5">Technologies:</h3>
             <div className="flex flex-wrap gap-2">
-              {project.techStack.map((tech, index) => (
+              {project.tech.map((tech, index) => (
                 <div
                   key={index}
                   className="py-1 px-2 rounded-md bg-accent-200 flex justify-center gap-2 items-center border text-text-100"
@@ -169,24 +192,30 @@ export default function ProjectDetail() {
         </div>
         <article className=" max-w-[65ch] prose mb-20 lg:prose-lg dark:text-amber-50">
           {/* Project Summary */}
-          <h2 id="resumen-del-proyecto">Project Summary</h2>
+          <h2
+            id="resumen-del-proyecto"
+            className="text-2xl lg:text-3xl font-bold mb-3"
+          >
+            Project Summary
+          </h2>
           <p className="mb-5">{project.projectSummary}</p>
           {/* Project Sample Image */}
           {/* Image Grid */}
           <div className="grid grid-cols-3 gap-4 mt-5 mb-5">
-            {project.sampleImageProject.map((src, index) => (
-              <div
-                key={index}
-                className="relative w-full aspect-square overflow-hidden rounded-xl cursor-pointer group"
-                // Open modal with selected image
-              >
-                <img
-                  src={src}
-                  alt={`Image ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                />
-              </div>
-            ))}
+            {Array.isArray(project.sampleImageProject) &&
+              project.sampleImageProject.map((src: string, index: number) => (
+                <div
+                  key={index}
+                  className="relative w-full aspect-square overflow-hidden rounded-xl cursor-pointer group"
+                  onClick={() => handleImageClick(src)} // Replace with your modal logic
+                >
+                  <img
+                    src={src}
+                    alt={`Image ${index + 1}`}
+                    className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                  />
+                </div>
+              ))}
           </div>
 
           {/* Popup Modal */}
@@ -223,55 +252,73 @@ export default function ProjectDetail() {
                   </button>
                 </div>
                 <div className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2">
-                  <button
+                  {/* <button
                     className="bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200"
                     disabled={
                       currentIndex === project.sampleImageProject.length - 1
                     } // Disable when at the last image
                   >
                     &gt;
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
           )}
 
           {/* Objective */}
-          <h2 id="Objective">Aim</h2>
-          <p>
-            The main goal of {project.title} is to provide users with an
+          <h2 id="Objective" className=" text-2xl lg:text-3xl font-bold mb-3">
+            Aim
+          </h2>
+          <p className=" mb-5">
+            The main goal of {project.name} is to provide users with an
             all-in-on tool to:
           </p>
-          <ul>
-            {project.aim.map((aims, index) => (
-              <li key={index}>{aims}</li>
-            ))}
-          </ul>
+          {Array.isArray(project.aim) && project.aim.length > 0 && (
+            <ul className="list-disc list-inside space-y-1">
+              {project.aim.map((aim, index) => (
+                <li key={index} className=" mb-5">
+                  {aim}
+                </li>
+              ))}
+            </ul>
+          )}
           {/* Objective */}
-          <h2 id="Objective">Technologies Used</h2>
+          <h2 id="Objective" className=" text-2xl lg:text-3xl font-bold mb-4">
+            Technologies Used
+          </h2>
           <ul>
-            <li>
+            <li className=" mb-5">
               <h3 className="inline font-semibold">Frontend: </h3>
               <span>
                 {project.technologiesUsed?.[0]?.frontEnd || "Not specified"}{" "}
               </span>
             </li>
-            <li>
+            <li className=" mb-5">
               <h3 className="inline font-semibold">Backend: </h3>
               <span>
                 {project.technologiesUsed?.[0]?.backEnd || "Not specified"}
               </span>
             </li>
-            <li>
+            <li className=" mb-5">
               <h3 className="inline font-semibold">Database: </h3>
               <span>
                 {project.technologiesUsed?.[0]?.dataBase || "Not specified"}
               </span>
             </li>
           </ul>
-          <h2 id="resumen-del-proyecto">Database Design</h2>
+          <h2
+            id="resumen-del-proyecto"
+            className="text-2xl lg:text-3xl font-bold mb-5"
+          >
+            Database Design
+          </h2>
           {/* data diagram image */}
-          <h2 id="resumen-del-proyecto">implementation</h2>
+          <h2
+            id="resumen-del-proyecto"
+            className=" text-2xl lg:text-3xl font-bold mb-3"
+          >
+            implementation
+          </h2>
           <div className="mb-5">
             <h3 className="font-semibold">Frontend:</h3>
             <ul className="list-disc list-inside ml-4">
@@ -295,7 +342,7 @@ export default function ProjectDetail() {
                 <li key={index}>{item}</li>
               )) || <li>Not specified</li>}
             </ul>
-            <h2>Links</h2>
+            <h2 className=" mb-5">Links</h2>
             <ul>
               <li>
                 <a
@@ -309,7 +356,7 @@ export default function ProjectDetail() {
             </ul>
           </div>
         </article>
-      </div>
+      </motion.section>
     </>
   );
 }
