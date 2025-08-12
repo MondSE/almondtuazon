@@ -5,10 +5,9 @@ const SocialLinks = () => {
   return (
     <motion.section
       className="bento-card p-4 col-span-1 md:col-span-2 space-y-3 group"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
     >
       <h2 className="text-2xl font-bold mb-6 border-b border-gray-800 pb-2">
         Connect

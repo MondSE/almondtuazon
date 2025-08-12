@@ -23,7 +23,7 @@ const Projects = () => {
           >
             <h3 className="text-lg font-semibold text-white">{proj.name}</h3>
             <p className="text-sm text-gray-300 mt-1">{proj.description}</p>
-            <div className="flex gap-2 mt-2 flex-wrap">
+            <div className="flex gap-2 mt-2 flex-wrap mb-3">
               {proj.tech.map((tech, i) => (
                 <span
                   key={i}
@@ -36,19 +36,19 @@ const Projects = () => {
             <div className="flex gap-4 mt-2">
               <Link
                 href={`/projects/view/${idx + 1}`}
-                className="bg-black dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
+                className=" bg-gray-700 dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
               >
                 <span>Docs</span>
               </Link>
               <Link
                 href={"#"}
-                className="bg-black dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
+                className="bg-gray-700 dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
               >
                 <span>Image</span>
               </Link>
               <Link
                 href={"#"}
-                className="bg-black dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
+                className="bg-gray-700 dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
               >
                 <span>GitHub</span>
               </Link>

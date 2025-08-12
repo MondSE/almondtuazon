@@ -6,9 +6,9 @@ const Header = () => {
   return (
     <motion.div
       className="flex flex-col md:flex-row items-start md:items-center justify-between py-10 md:py-10 md:border-b border-gray-800 gap-4"
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
     >
       {headerData.map((hed, hedi) => (
         <div key={hedi}>
