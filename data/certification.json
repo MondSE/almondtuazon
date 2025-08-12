@@ -3,56 +3,56 @@
     "id": 1,
     "title": "Introduction to Packet Tracer",
     "issuer": "Cisco Networking Academy",
-    "year": "--",
-    "link": "#"
+    "year": "12-08-2020",
+    "link": "https://drive.google.com/file/d/1L5WgsFQL2Nq4XPiS80dIWmmrv0vR98eu/view?usp=sharing"
   },
   {
     "id": 2,
     "title": "Partner: CPA - Programming Essentials in C++",
     "issuer": "Cisco Networking Academy",
-    "year": "--",
-    "link": "#"
+    "year": "01-06-2021",
+    "link": "https://drive.google.com/file/d/1XSn9dRIXEwDGKGT5olTQbgoyJW6EoYpP/view?usp=sharing"
   },
   {
     "id": 3,
     "title": "Partner: CPP - Advanced Programming in C++",
     "issuer": "Cisco Networking Academy",
-    "year": "--",
-    "link": "#"
+    "year": "02-21-2021",
+    "link": "https://drive.google.com/file/d/13V3B1Nxx6qgSUrWfbCjJka8MCuKbgxQG/view?usp=sharing"
   },
   {
     "id": 4,
     "title": "CCNAv7: Introduction to Networks",
     "issuer": "Cisco Networking Academy",
-    "year": "--",
-    "link": "#"
+    "year": "04-06-2022",
+    "link": "https://drive.google.com/file/d/1khmLffH34hff2QbrIPdy_EORHG-pIEMy/view?usp=sharing"
   },
   {
     "id": 5,
     "title": "Introduction to Cybersecurity",
     "issuer": "Cisco Networking Academy",
-    "year": "--",
-    "link": "#"
+    "year": "06-16-2022",
+    "link": "https://drive.google.com/file/d/1cbM_gJnJdK-Wx-7BeQKONOiA5bULjCYw/view?usp=sharing"
   },
   {
     "id": 6,
     "title": "SQL",
     "issuer": "TestDome",
-    "year": "--",
-    "link": "#"
+    "year": "03-20-2023",
+    "link": "https://www.testdome.com/certificates/4ab31b60d2d142f29168cb1ab3061a86"
   },
   {
     "id": 7,
     "title": "PHP",
     "issuer": "TestDome",
-    "year": "--",
-    "link": "#"
+    "year": "03-20-2023",
+    "link": "https://www.testdome.com/certificates/10d63437a0134c8bb576ac47bde04f96"
   },
   {
     "id": 8,
     "title": "JavaScript",
     "issuer": "TestDome",
-    "year": "--",
-    "link": "#"
+    "year": "05-07-2023",
+    "link": "https://www.testdome.com/certificates/1c8499ef94e040b98e6761b0dfdc3fe9"
   }
 ]

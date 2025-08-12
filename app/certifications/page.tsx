@@ -52,7 +52,7 @@ const certifications = () => {
             key={idx}
             className=" bento-card p-4 space-y-2 group hover:bg-muted/50"
           >
-            <Link href={"#"} key={idx}>
+            <Link href={cert.link} key={idx} target="_blank">
               <h3 className=" text-lg font-semibold group-hover:text-accent transition-colors">
                 {/* Certification title */}
                 {cert.title}
@@ -60,6 +60,10 @@ const certifications = () => {
               <p className=" text-sm text-foreground/70">
                 {/* company name */}
                 {cert.issuer}
+              </p>
+              <p className=" text-sm text-foreground/70">
+                {/* company name */}
+                {cert.year}
               </p>
             </Link>
           </motion.div>

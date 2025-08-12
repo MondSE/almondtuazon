@@ -5,85 +5,16 @@ import * as motion from "motion/react-client";
 import Link from "next/link";
 import data from "@/data/project.json";
 
-// const data = [
-//   {
-//     id: 1,
-//     header: "ACTDO",
-//     title: "ACTDO Mangement Information System",
-//     techStack: ["html", "css", "js", "MySql", "Xampp"],
-//     githubLink: "https://github.com/MondSE/ACTDO-IMS-DEMO",
-//     projectSummary:
-//       "This project is used as a template for the demonstration of the information management system of ACTDO as a Projects using the PHP native and Sql on Xampp to be clear there are no ACTDO valuable data exposed to upload this template.",
-//     sampleImageProject: ["none"],
-//     aim: [
-//       "This software is to automate these processes and to improve the overall efficiency and clients experience of Office.",
-//       "The system is easy to use and has user-friendly functionalities to help the employee's for their daily transactions.",
-//     ],
-//     technologiesUsed: [
-//       {
-//         frontEnd:
-//           " HTML, CSS, JavaScript and Bootstrap for the user interface.",
-//         backEnd: " PHP with the Xampp to handle application logic and APIs.",
-//         dataBase:
-//           " MySQL to store user data, routines and queries to the virtual assistant.",
-//       },
-//     ],
-//     dataBaseDiagram: "image",
-//     implementation: [
-//       {
-//         frontEnd: [
-//           "Development of a clean and dynamic user dashboard for creating, editing, and viewing exercise routines.",
-//           "Integration of interactive graphics to display physical progress.",
-//         ],
-//         backEnd: ["Implementation of endpoints for CRUD routines."],
-//         dataBase: [
-//           "Designing tables for users, exercises, and queries with normalized relationships.",
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     id: 2,
-//     header: "ACtdo",
-//     title: "hello",
-//     techStack: ["html", "css", "js", "MySql"],
-//     githubLink: "/",
-//     projectSummary: "explain ko muna",
-//     sampleImageProject: ["none", "none", "none", "none"],
-//     aim: ["none", "none", "none"],
-//     technologiesUsed: [
-//       {
-//         frontEnd: "asasdasdccc",
-//         backEnd: "asdasdasdccc",
-//         dataBase: "asdasdasdcccc",
-//       },
-//     ],
-//     dataBaseDiagram: "image",
-//     implementation: [
-//       {
-//         frontEnd: [
-//           "Development of a clean and dynamic user dashboard for creating, editing, and viewing exercise routines.",
-//           "Integration of interactive graphics to display physical progress.",
-//         ],
-//         backEnd: ["Implementation of endpoints for CRUD routines."],
-//         dataBase: [
-//           "Designing tables for users, exercises, and queries with normalized relationships.",
-//         ],
-//       },
-//     ],
-//   },
-// ];
-
 export default function ProjectDetail() {
   const params = useParams(); // Get route parameters
   const { id } = params; // Extract 'id'
-
   const project = data.find((p) => p.id === Number(id));
 
-  if (!project) return <h1>Project not found</h1>;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isFromGallery, setIsFromGallery] = useState<boolean>(false); // NEW
 
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(null);
   // Lock scroll when modal opens and unlock when it closes
   useEffect(() => {
     if (selectedImage) {
@@ -95,28 +26,6 @@ export default function ProjectDetail() {
       document.body.style.overflow = "auto"; // Ensure scroll is re-enabled
     };
   }, [selectedImage]);
-
-  // Show the selected image and set the index
-  //   const openModal = (index) => {
-  //     setSelectedImage(project.sampleImageProject[index]);
-  //     setCurrentIndex(index);
-  //   };
-
-  // Navigate to the next image
-  //   const nextImage = () => {
-  //     if (currentIndex < project.sampleImageProject.length - 1) {
-  //       setCurrentIndex(currentIndex + 1);
-  //       setSelectedImage(project.sampleImageProject[currentIndex + 1]);
-  //     }
-  //   };
-
-  // Navigate to the previous image
-  //   const prevImage = () => {
-  //     if (currentIndex > 0) {
-  //       setCurrentIndex(currentIndex - 1);
-  //       setSelectedImage(project.sampleImageProject[currentIndex - 1]);
-  //     }
-  //   };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -135,11 +44,38 @@ export default function ProjectDetail() {
     transition: { duration: 1.8 },
   };
 
+  if (!project) return <h1>Project not found</h1>;
+
   // Outside the JSX
   const handleImageClick = (src: string) => {
     // your modal opening logic here
     // e.g., setModalImage(src), setShowModal(true)
+    setSelectedImage(src);
+    setIsModalOpen(true);
   };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!selectedImage) return;
+      if (e.key === "ArrowLeft" && currentIndex > 0) {
+        const newIndex = currentIndex - 1;
+        setCurrentIndex(newIndex);
+        setSelectedImage(project.sampleImageProject![newIndex]);
+      } else if (
+        e.key === "ArrowRight" &&
+        currentIndex < project.sampleImageProject!.length - 1
+      ) {
+        const newIndex = currentIndex + 1;
+        setCurrentIndex(newIndex);
+        setSelectedImage(project.sampleImageProject![newIndex]);
+      } else if (e.key === "Escape") {
+        setSelectedImage(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedImage, currentIndex, project.sampleImageProject]);
 
   return (
     <>
@@ -190,7 +126,7 @@ export default function ProjectDetail() {
           </div>
           <p></p>
         </div>
-        <article className=" max-w-[65ch] prose mb-20 lg:prose-lg dark:text-amber-50">
+        <article className=" max-w-[65ch] mb-20 ">
           {/* Project Summary */}
           <h2
             id="resumen-del-proyecto"
@@ -207,7 +143,11 @@ export default function ProjectDetail() {
                 <div
                   key={index}
                   className="relative w-full aspect-square overflow-hidden rounded-xl cursor-pointer group"
-                  onClick={() => handleImageClick(src)} // Replace with your modal logic
+                  onClick={() => {
+                    setSelectedImage(src);
+                    setCurrentIndex(index);
+                    setIsFromGallery(true); // mark as gallery
+                  }}
                 >
                   <img
                     src={src}
@@ -222,12 +162,13 @@ export default function ProjectDetail() {
           {selectedImage && (
             <div
               className="fixed inset-0 z-[9999] bg-black bg-opacity-80 flex items-center justify-center"
-              onClick={() => setSelectedImage(null)} // Close modal when clicking outside
+              onClick={() => setSelectedImage(null)} // Close modal on backdrop click
             >
               <div
                 className="relative max-w-3xl w-full p-4"
-                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside image
+                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
               >
+                {/* Selected Image */}
                 <img
                   src={selectedImage}
                   alt="Selected"
@@ -237,30 +178,65 @@ export default function ProjectDetail() {
                 {/* Close Button */}
                 <button
                   className="absolute top-2 right-2 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md hover:bg-gray-200 text-xl"
-                  onClick={() => setSelectedImage(null)} // Close on button click
+                  onClick={() => {
+                    setSelectedImage(null);
+                    setIsFromGallery(false);
+                  }}
                 >
                   ×
                 </button>
+                {/* Navigation Buttons - Show only if it's an image gallery (array) */}
+                {isFromGallery &&
+                  Array.isArray(project.sampleImageProject) &&
+                  project.sampleImageProject.length > 1 && (
+                    <>
+                      {/* Previous Button */}
+                      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2">
+                        <button
+                          className="bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if (currentIndex > 0) {
+                              const newIndex = currentIndex - 1;
+                              setCurrentIndex(newIndex);
+                              setSelectedImage(
+                                project.sampleImageProject![newIndex]
+                              );
+                            }
+                          }}
+                          disabled={currentIndex === 0}
+                        >
+                          &lt;
+                        </button>
+                      </div>
 
-                {/* Navigation Buttons */}
-                <div className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2">
-                  <button
-                    className="bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200"
-                    disabled={currentIndex === 0} // Disable when at the first image
-                  >
-                    &lt;
-                  </button>
-                </div>
-                <div className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2">
-                  {/* <button
-                    className="bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200"
-                    disabled={
-                      currentIndex === project.sampleImageProject.length - 1
-                    } // Disable when at the last image
-                  >
-                    &gt;
-                  </button> */}
-                </div>
+                      {/* Next Button */}
+                      <div className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2">
+                        <button
+                          className="bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if (
+                              currentIndex <
+                              project.sampleImageProject!.length - 1
+                            ) {
+                              const newIndex = currentIndex + 1;
+                              setCurrentIndex(newIndex);
+                              setSelectedImage(
+                                project.sampleImageProject![newIndex]
+                              );
+                            }
+                          }}
+                          disabled={
+                            currentIndex ===
+                            project.sampleImageProject!.length - 1
+                          }
+                        >
+                          &gt;
+                        </button>
+                      </div>
+                    </>
+                  )}
               </div>
             </div>
           )}
@@ -313,6 +289,28 @@ export default function ProjectDetail() {
             Database Design
           </h2>
           {/* data diagram image */}
+
+          {/* Project Sample Image */}
+          {/* Image Grid */}
+          <div className="mt-5 mb-5">
+            {project.dataBaseDiagram &&
+              typeof project.dataBaseDiagram === "string" && (
+                <div
+                  className="relative w-full aspect-square overflow-hidden rounded-xl cursor-pointer group"
+                  onClick={() => {
+                    setSelectedImage(project.dataBaseDiagram);
+                    setIsFromGallery(false); // mark as single
+                  }}
+                  // Show the single image in modal
+                >
+                  <img
+                    src={project.dataBaseDiagram}
+                    alt="Database Diagram"
+                    className="w-full h-full object-fit transition-transform group-hover:scale-105"
+                  />
+                </div>
+              )}
+          </div>
           <h2
             id="resumen-del-proyecto"
             className=" text-2xl lg:text-3xl font-bold mb-3"
