@@ -40,15 +40,16 @@ const Projects = () => {
               >
                 <span>Docs</span>
               </Link>
-              <Link
+              {/* <Link
                 href={"#"}
                 className="bg-gray-700 dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
               >
                 <span>Image</span>
-              </Link>
+              </Link> */}
               <Link
-                href={"#"}
+                href={proj.githubLink}
                 className="bg-gray-700 dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
+                target="_blank"
               >
                 <span>GitHub</span>
               </Link>

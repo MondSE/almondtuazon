@@ -119,7 +119,7 @@ export default function ProjectDetail() {
             <a
               href={project.githubLink}
               target="_blank"
-              className=" text-pretty text-primary-100 underline"
+              className=" text-pretty text-primary-100 underline wrap-anywhere"
             >
               {project.githubLink}
             </a>
@@ -289,14 +289,12 @@ export default function ProjectDetail() {
             Database Design
           </h2>
           {/* data diagram image */}
-
-          {/* Project Sample Image */}
           {/* Image Grid */}
           <div className="mt-5 mb-5">
             {project.dataBaseDiagram &&
               typeof project.dataBaseDiagram === "string" && (
                 <div
-                  className="relative w-full aspect-square overflow-hidden rounded-xl cursor-pointer group"
+                  className=" relative overflow-hidden rounded-xl cursor-pointer group"
                   onClick={() => {
                     setSelectedImage(project.dataBaseDiagram);
                     setIsFromGallery(false); // mark as single
@@ -306,7 +304,7 @@ export default function ProjectDetail() {
                   <img
                     src={project.dataBaseDiagram}
                     alt="Database Diagram"
-                    className="w-full h-full object-fit transition-transform group-hover:scale-105"
+                    className=" object-fit transition-transform group-hover:scale-105"
                   />
                 </div>
               )}

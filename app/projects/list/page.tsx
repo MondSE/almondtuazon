@@ -62,7 +62,7 @@ const projectList = () => {
               <p className="text-sm dark:text-gray-300 mt-1">
                 {proj.description}
               </p>
-              <div className="flex gap-2 mt-2 flex-wrap">
+              <div className="flex gap-2 mt-2 flex-wrap mb-3">
                 {proj.tech.map((tech, i) => (
                   <span
                     key={i}
@@ -72,22 +72,23 @@ const projectList = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex gap-4 mt-2">
+              <div className="flex gap-4">
                 <Link
                   href={`/projects/view/${idx + 1}`}
                   className="bg-black dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
                 >
                   <span>Docs</span>
                 </Link>
-                <Link
+                {/* <Link
                   href={"#"}
                   className="bg-black dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
                 >
                   <span>Image</span>
-                </Link>
+                </Link> */}
                 <Link
-                  href={"#"}
+                  href={proj.githubLink}
                   className="bg-black dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
+                  target="_blank"
                 >
                   <span>GitHub</span>
                 </Link>
