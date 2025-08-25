@@ -3,18 +3,40 @@
     "company": "Global Knowledge Academy (GKA)",
     "title": "Computer System Servicing - [Intern]",
     "year": "Sept 2016 - Sept 2016",
-    "description": "--"
+    "techstack": ["Cisco Networking", "Microsoft Server 2008", "MySQL", "Bash"],
+    "description": [
+      "Diagnosed and resolved the networking issues, performed minor equipment repairs, and supported PC hardware, operating system and applications ensuring optimized system performance and reduced downtime.",
+      "Collaborated with cross functional team and worked independently to troubleshoot user requests and implement solutions, resulting in improved efficiency and enhanced user experience."
+    ]
   },
   {
     "company": "City Government of Angeles (ACTDO)",
     "title": "Data Analysis - [Office Worker II]",
     "year": "Oct 2017 – Jun 2020",
-    "description": "--"
+    "techstack": ["Excel", "Word", "PowerPoint", "MySQL"],
+    "description": [
+      "Strengthened communication and critical thinking by collaborating with team members to resolve discrepancies, streamline workflows, and support accurate decision making.",
+      "Delivered accurate data entry, analysis and reporting while applying advanced time management strategies, consistently meeting tight deadlines without compromising quality."
+    ]
   },
   {
     "company": "City Government of Angeles (ACTDO)",
-    "title": "System Developer [Office Worker V]",
+    "title": "System Developer - [Office Worker V]",
     "year": "Jul 2020 – Dec 2022",
-    "description": "--"
+    "techstack": ["Html", "CSS", "JavaScript", "Php", "MySQL", "Xampp"],
+    "description": [
+      "Streamlined the research, design and Implementation of software programs while optimizing code efficiency and modifying existing systems resulting in improved reliability, faster processing, and reduced resource usage.",
+      "Collaborated with developer, UX designers and operation analyst to establish robust quality assurance procedures and deliver user centric software solution aligned with organizational objectives."
+    ]
+  },
+  {
+    "company": "City Government of Angeles (NBI Satellite Office)",
+    "title": "IT/Data Processing - [Office Worker IV]",
+    "year": "Jan 2025 - Jun 2025",
+    "techstack": ["Cisco Networking", "Microsoft Server 2008", "MySQL", "Bash"],
+    "description": [
+      "Delivered end to end technical support by troubleshooting hardware, network, operating system and software issues while collecting, processing and validating client data ensuring seamless operations and reliable information management.",
+      "Maintained system and database accuracy, consistency and integrity through proactive monitoring and practical solutions, resulting in enhanced user experience and improved organization efficiency."
+    ]
   }
 ]
