@@ -26,7 +26,7 @@ export default function Home() {
         <Certifications />
         {/* <Recommendation /> */}
         <SocialLinks />
-        <BlogPosts />
+        {/* <BlogPosts /> */}
       </section>
     </motion.div>
   );

@@ -30,3 +30,8 @@ body {
   transition: all 0.2s ease-in-out;
   border: 1px solid;
 }
+
+.grainy {
+  background-image: url(../public/asset/grainy.webp);
+  opacity: 1;
+}

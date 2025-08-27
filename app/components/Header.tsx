@@ -5,7 +5,7 @@ import headerData from "@/data/header.json";
 const Header = () => {
   return (
     <motion.div
-      className="flex flex-col md:flex-row items-start md:items-center justify-between py-10 md:py-10 md:border-b border-gray-800 gap-4"
+      className="flex flex-col md:flex-row items-start md:items-center justify-between py-10 md:py-10 gap-4"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -18,12 +18,9 @@ const Header = () => {
         </div>
       ))}
       <div className="flex flex-wrap gap-3">
-        {/* <button className="bg-white text-black px-4 py-2 rounded text-sm font-medium hover:bg-gray-200 transition">
-          Schedule a Call
+        <button className="dark:bg-gray-700 dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded shadow hover:scale-105 transition-transform hover:bg-gray-300 ">
+          Download CV
         </button>
-        <button className="border border-white px-4 py-2 rounded text-sm font-medium hover:bg-white hover:text-black transition">
-          Send Email
-        </button> */}
       </div>
     </motion.div>
   );

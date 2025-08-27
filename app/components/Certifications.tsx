@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import * as motion from "motion/react-client";
 import certifications from "@/data/certification.json";
 import Link from "next/link";
+import { PiCertificate } from "react-icons/pi";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Certifications = () => {
   const [showAll, setShowAll] = useState(false);
@@ -16,23 +18,32 @@ const Certifications = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <h2 className="text-2xl font-bold mb-6 border-b border-gray-800 pb-2">
-        Certifications
-      </h2>
-      <ul className="space-y-4">
-        {displayedCerts.map((cert, idx) => (
-          <li key={idx} className="bg-gray-800 p-4 rounded shadow">
-            <h3 className="text-md font-semibold">{cert.title}</h3>
-            <p className="text-sm text-gray-400">
-              {cert.issuer} · {cert.year}
-            </p>
-          </li>
-        ))}
-        <Link href={"/certifications"}>
-          <p className="mt-4 text-sm text-blue-400 hover:underline">
+      <div className="flex items-center justify-between mb-6 border-b border-gray-800 pb-2">
+        <div className="flex items-center gap-2">
+          <PiCertificate size={24} />
+          <h2 className="text-2xl font-bold">Certifications</h2>
+        </div>
+        <Link href="/certifications">
+          <p className="flex items-center gap-1 text-sm hover:underline">
+            <IoIosArrowRoundForward className="text-lg" />
             View More
           </p>
         </Link>
+      </div>
+      <ul className="space-y-4">
+        {displayedCerts.map((cert, idx) => (
+          <li
+            key={idx}
+            className="dark:bg-gray-800 p-4 border-1 rounded shadow hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+          >
+            <Link href={cert.link} target="_blank">
+              <h3 className="text-md font-semibold">{cert.title}</h3>
+              <p className="text-sm dark:text-gray-400">
+                {cert.issuer} · {cert.year}
+              </p>
+            </Link>
+          </li>
+        ))}
       </ul>
     </motion.section>
   );
