@@ -17,10 +17,15 @@ const Header = () => {
           <p className="text-sm dark:text-gray-400">{hed.Position}</p>
         </div>
       ))}
+
       <div className="flex flex-wrap gap-3">
-        <button className="dark:bg-gray-700 dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded shadow hover:scale-105 transition-transform hover:bg-gray-300 ">
+        <a
+          href="/asset/CV.pdf"
+          download="AlmondCV.pdf"
+          className="dark:bg-gray-700 dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded shadow hover:scale-105 transition-transform hover:bg-gray-300"
+        >
           Download CV
-        </button>
+        </a>
       </div>
     </motion.div>
   );
