@@ -193,7 +193,9 @@ export default function ProjectDetailClient({ project }: Props) {
                             const newIndex = currentIndex - 1;
                             setCurrentIndex(newIndex);
                             setSelectedImage(
-                              project.sampleImageProject![newIndex]
+                              withBasePath(
+                                project.sampleImageProject![newIndex]
+                              )
                             );
                           }
                         }}
@@ -215,7 +217,9 @@ export default function ProjectDetailClient({ project }: Props) {
                             const newIndex = currentIndex + 1;
                             setCurrentIndex(newIndex);
                             setSelectedImage(
-                              project.sampleImageProject![newIndex]
+                              withBasePath(
+                                project.sampleImageProject![newIndex]
+                              )
                             );
                           }
                         }}
