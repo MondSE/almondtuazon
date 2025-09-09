@@ -180,15 +180,108 @@ export default function ProjectDetailClient({ project }: Props) {
               >
                 ×
               </button>
+
+              {/* Gallery Nav */}
+              {isFromGallery &&
+                Array.isArray(project.sampleImageProject) &&
+                project.sampleImageProject.length > 1 && (
+                  <>
+                    <div className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2">
+                      <button
+                        className="bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (currentIndex > 0) {
+                            const newIndex = currentIndex - 1;
+                            setCurrentIndex(newIndex);
+                            setSelectedImage(
+                              project.sampleImageProject![newIndex]
+                            );
+                          }
+                        }}
+                        disabled={currentIndex === 0}
+                      >
+                        &lt;
+                      </button>
+                    </div>
+
+                    <div className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2">
+                      <button
+                        className="bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (
+                            currentIndex <
+                            project.sampleImageProject!.length - 1
+                          ) {
+                            const newIndex = currentIndex + 1;
+                            setCurrentIndex(newIndex);
+                            setSelectedImage(
+                              project.sampleImageProject![newIndex]
+                            );
+                          }
+                        }}
+                        disabled={
+                          currentIndex ===
+                          project.sampleImageProject!.length - 1
+                        }
+                      >
+                        &gt;
+                      </button>
+                    </div>
+                  </>
+                )}
             </div>
           </div>
         )}
 
+        {/* Aim */}
+        <h2 className="text-2xl lg:text-3xl font-bold mb-3">Aim</h2>
+        <p className="mb-5">
+          The main goal of {project.name} is to provide users with an all-in-one
+          tool to:
+        </p>
+        {Array.isArray(project.aim) && project.aim.length > 0 && (
+          <ul className="list-disc list-inside space-y-1">
+            {project.aim.map((aim: string, index: number) => (
+              <li key={index} className="mb-5">
+                {aim}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {/* Technologies Used */}
+        <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+          Technologies Used
+        </h2>
+        <ul>
+          <li className="mb-5">
+            <h3 className="inline font-semibold">Frontend: </h3>
+            <span>
+              {project.technologiesUsed?.[0]?.frontEnd || "Not specified"}
+            </span>
+          </li>
+          <li className="mb-5">
+            <h3 className="inline font-semibold">Backend: </h3>
+            <span>
+              {project.technologiesUsed?.[0]?.backEnd || "Not specified"}
+            </span>
+          </li>
+          <li className="mb-5">
+            <h3 className="inline font-semibold">Database: </h3>
+            <span>
+              {project.technologiesUsed?.[0]?.dataBase || "Not specified"}
+            </span>
+          </li>
+        </ul>
+
         {/* Database Diagram */}
+        <h2 className="text-2xl lg:text-3xl font-bold mb-5">Database Design</h2>
         {project.dataBaseDiagram &&
           typeof project.dataBaseDiagram === "string" && (
             <div
-              className="relative overflow-hidden rounded-xl cursor-pointer group"
+              className="relative overflow-hidden rounded-xl cursor-pointer group mb-5"
               onClick={() => {
                 setSelectedImage(withBasePath(project.dataBaseDiagram));
                 setIsFromGallery(false);
@@ -203,6 +296,47 @@ export default function ProjectDetailClient({ project }: Props) {
               />
             </div>
           )}
+
+        {/* Implementation */}
+        <h2 className="text-2xl lg:text-3xl font-bold mb-3">Implementation</h2>
+        <div className="mb-5">
+          <h3 className="font-semibold">Frontend:</h3>
+          <ul className="list-disc list-inside ml-4">
+            {project.implementation?.[0]?.frontEnd?.map(
+              (item: string, index: number) => <li key={index}>{item}</li>
+            ) || <li>Not specified</li>}
+          </ul>
+        </div>
+        <div className="mb-5">
+          <h3 className="font-semibold">Backend:</h3>
+          <ul className="list-disc list-inside ml-4">
+            {project.implementation?.[0]?.backEnd?.map(
+              (item: string, index: number) => <li key={index}>{item}</li>
+            ) || <li>Not specified</li>}
+          </ul>
+        </div>
+        <div className="mb-5">
+          <h3 className="font-semibold">Database:</h3>
+          <ul className="list-disc list-inside ml-4">
+            {project.implementation?.[0]?.dataBase?.map(
+              (item: string, index: number) => <li key={index}>{item}</li>
+            ) || <li>Not specified</li>}
+          </ul>
+        </div>
+
+        {/* Links */}
+        <h2 className="mb-5">Links</h2>
+        <ul>
+          <li>
+            <a
+              href={project.githubLink}
+              target="_blank"
+              className="text-pretty text-primary-100 underline"
+            >
+              GitHub Repository
+            </a>
+          </li>
+        </ul>
       </article>
     </motion.section>
   );
