@@ -2,6 +2,7 @@ import * as motion from "motion/react-client";
 import Link from "next/link";
 import React from "react";
 import project from "@/data/project.json";
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -34,6 +35,7 @@ const projectList = () => {
             className=" inline-flex items-center gap-2 text-s, text-foreground/70 hover:text-foreground transition-colors"
             href={"/"}
           >
+            <IoIosArrowRoundBack className=" text-4xl" />
             Back to Home
           </Link>
         </motion.div>
@@ -54,7 +56,7 @@ const projectList = () => {
           >
             <div
               key={idx}
-              className="block p-4 rounded hover:shadow-lg transition"
+              className="block p-4 rounded hover:shadow-lg transition hover:bg-gray-300"
             >
               <h3 className="text-lg font-semibold dark:text-white">
                 {proj.name}
@@ -75,7 +77,7 @@ const projectList = () => {
               <div className="flex gap-4">
                 <Link
                   href={`/projects/view/${idx + 1}`}
-                  className="bg-black dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
+                  className="dark:bg-black dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
                 >
                   <span>Docs</span>
                 </Link>
@@ -87,7 +89,7 @@ const projectList = () => {
                 </Link> */}
                 <Link
                   href={proj.githubLink}
-                  className="bg-black dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
+                  className="dark:bg-black dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
                   target="_blank"
                 >
                   <span>GitHub</span>

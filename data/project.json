@@ -77,5 +77,49 @@
         ]
       }
     ]
+  },
+  {
+    "id": 3,
+    "name": "RLCM",
+    "description": "Review Listing Content Management",
+    "tech": ["Laravel", "Vue", "PHP", "JavaScript", "Tailwind", "Sqlite"],
+    "link": "/",
+    "githubLink": "https://github.com/MondSE/Laravel-Vue3-Listing-App",
+    "projectSummary": " This personal project is used as a template for the demonstration of the Review Listing Content Management App of making blog, reviews, bussiness as i use the PHP, Vue3 and Sqlite database that use the framework Laravel for this simple personal project.",
+    "sampleImageProject": [
+      "/asset/project/LISTING_Laravel_APP_IMG/2.png",
+      "/asset/project/LISTING_Laravel_APP_IMG/3.png",
+      "/asset/project/LISTING_Laravel_APP_IMG/1.png",
+      "/asset/project/LISTING_Laravel_APP_IMG/4.png",
+      "/asset/project/LISTING_Laravel_APP_IMG/5.png",
+      "/asset/project/LISTING_Laravel_APP_IMG/6.png",
+      "/asset/project/LISTING_Laravel_APP_IMG/7.png",
+      "/asset/project/LISTING_Laravel_APP_IMG/8.png",
+      "/asset/project/LISTING_Laravel_APP_IMG/9.png"
+    ],
+    "aim": [
+      "This software is to automate these processes and to improve the overall efficiency and clients experience of Office.",
+      "The system is easy to use and has user-friendly functionalities to help the employee's for their daily inventory."
+    ],
+    "technologiesUsed": [
+      {
+        "frontEnd": " Vue and vite for the user interface.",
+        "backEnd": " Php to handle application logic and APIs.",
+        "dataBase": " Sqlite to store user data, routines."
+      }
+    ],
+    "dataBaseDiagram": "/asset/project/PIS_IMG/db1.png",
+    "implementation": [
+      {
+        "frontEnd": [
+          "Development of a clean and dynamic user for creating, editing, and viewing exercise routines.",
+          "Integration of interactive graphics to display physical progress."
+        ],
+        "backEnd": ["Implementation of endpoints for CRUD routines."],
+        "dataBase": [
+          "Designing tables for users, exercises, and queries with normalized relationships."
+        ]
+      }
+    ]
   }
 ]
