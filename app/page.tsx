@@ -1,14 +1,11 @@
-import Image from "next/image";
 import Header from "./components/Header";
 import { About } from "./components/About";
 import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
 import * as motion from "motion/react-client";
 import Certifications from "./components/Certifications";
-import Recommendation from "./components/Recommendation";
 import SocialLinks from "./components/SocialLinks";
 import Projects from "./components/Projects";
-import BlogPosts from "./components/BlogPosts";
 
 export default function Home() {
   return (
@@ -24,9 +21,7 @@ export default function Home() {
         <TechStack />
         <Projects />
         <Certifications />
-        {/* <Recommendation /> */}
         <SocialLinks />
-        {/* <BlogPosts /> */}
       </section>
     </motion.div>
   );

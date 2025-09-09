@@ -8,7 +8,7 @@ import { PiCertificate } from "react-icons/pi";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Certifications = () => {
-  const [showAll, setShowAll] = useState(false);
+  const [showAll] = useState(false);
   const displayedCerts = showAll ? certifications : certifications.slice(0, 4);
 
   return (
