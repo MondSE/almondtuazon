@@ -10,13 +10,11 @@ type Props = {
   project: Project;
 };
 
-// ✅ Use env variable instead of getConfig
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const basePath = process.env.NODE_ENV === "production" ? "/almondtuazon" : "";
 
-// Helper for image paths
 const withBasePath = (src: string) => {
   if (!src) return "";
-  if (src.startsWith("http")) return src; // leave full URLs untouched
+  if (src.startsWith("http")) return src; // external links untouched
   return `${basePath}${src.startsWith("/") ? src : `/${src}`}`;
 };
 

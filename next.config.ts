@@ -4,11 +4,9 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
   output: "export",
-  images: {
-    unoptimized: true,
-  },
-  basePath: isProd ? "/almondtuazon" : "",
-  assetPrefix: isProd ? "/almondtuazon/" : "",
+  images: { unoptimized: true },
+  basePath: process.env.NODE_ENV === "production" ? "/almondtuazon" : "",
+  assetPrefix: process.env.NODE_ENV === "production" ? "/almondtuazon/" : "",
   trailingSlash: true, // 👈 helps with routing on GitHub Pages
 };
 
