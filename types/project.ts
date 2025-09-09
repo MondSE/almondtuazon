@@ -1,16 +1,4 @@
-export type TechnologyUsed = {
-  frontEnd: string;
-  backEnd: string;
-  dataBase: string;
-};
-
-export type Implementation = {
-  frontEnd: string[];
-  backEnd: string[];
-  dataBase: string[];
-};
-
-export type Project = {
+export interface Project {
   id: number;
   name: string;
   description: string;
@@ -20,7 +8,15 @@ export type Project = {
   projectSummary: string;
   sampleImageProject: string[];
   aim: string[];
-  technologiesUsed: TechnologyUsed[];
+  technologiesUsed: {
+    frontEnd: string;
+    backEnd: string;
+    dataBase: string;
+  }[];
   dataBaseDiagram: string;
-  implementation: Implementation[];
-};
+  implementation: {
+    frontEnd: string[];
+    backEnd: string[];
+    dataBase: string[];
+  }[];
+}

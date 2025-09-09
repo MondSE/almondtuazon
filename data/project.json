@@ -8,13 +8,13 @@
     "githubLink": "https://github.com/MondSE/ACTDO-IMS-DEMO",
     "projectSummary": "This project is used as a template for the demonstration of the information management system of ACTDO as a Projects using the PHP native and Sql on Xampp to be clear there are no ACTDO valuable data exposed to upload this template.",
     "sampleImageProject": [
-      "../asset/project/ACTDO_IMS_IMG/1.png",
-      "../asset/project/ACTDO_IMS_IMG/2.png",
-      "../asset/project/ACTDO_IMS_IMG/3.png",
-      "../asset/project/ACTDO_IMS_IMG/4.png",
-      "../asset/project/ACTDO_IMS_IMG/5.png",
-      "../asset/project/ACTDO_IMS_IMG/6.png",
-      "../asset/project/ACTDO_IMS_IMG/7.png"
+      "/asset/project/ACTDO_IMS_IMG/1.png",
+      "/asset/project/ACTDO_IMS_IMG/2.png",
+      "/asset/project/ACTDO_IMS_IMG/3.png",
+      "/asset/project/ACTDO_IMS_IMG/4.png",
+      "/asset/project/ACTDO_IMS_IMG/5.png",
+      "/asset/project/ACTDO_IMS_IMG/6.png",
+      "/asset/project/ACTDO_IMS_IMG/7.png"
     ],
     "aim": [
       "This software is to automate these processes and to improve the overall efficiency and clients experience of Office.",
