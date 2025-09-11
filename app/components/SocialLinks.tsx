@@ -5,8 +5,6 @@ import {
   FaGithub,
   FaInstagram,
   FaLinkedin,
-  FaTiktok,
-  FaTwitch,
 } from "react-icons/fa";
 import { MdConnectWithoutContact } from "react-icons/md";
 
