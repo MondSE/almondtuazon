@@ -3,6 +3,14 @@ import * as motion from "motion/react-client";
 import Image from "next/image"; // ✅ Next.js optimized image
 import headerData from "@/data/header.json";
 
+const basePath = process.env.NODE_ENV === "production" ? "/almondtuazon" : "";
+
+const withBasePath = (src: string) => {
+  if (!src) return "";
+  if (src.startsWith("http")) return src; // external links untouched
+  return `${basePath}${src.startsWith("/") ? src : `/${src}`}`;
+};
+
 const Header = () => {
   return (
     <motion.div
@@ -15,9 +23,7 @@ const Header = () => {
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
         {/* Profile Image */}
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${
-            headerData.profilepicture
-          }`}
+          src={withBasePath(headerData.profilepicture)}
           alt="Profile Photo"
           width={120}
           height={120}
