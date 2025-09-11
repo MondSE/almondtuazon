@@ -2,6 +2,7 @@ import * as motion from "motion/react-client";
 import Link from "next/link";
 import React from "react";
 import certification from "@/data/certification.json";
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -34,6 +35,7 @@ const certifications = () => {
             className=" inline-flex items-center gap-2 text-s, text-foreground/70 hover:text-foreground transition-colors"
             href={"/"}
           >
+            <IoIosArrowRoundBack className=" text-4xl" />
             Back to Home
           </Link>
         </motion.div>
@@ -50,10 +52,10 @@ const certifications = () => {
           <motion.div
             variants={itemVariants}
             key={idx}
-            className=" bento-card p-4 space-y-2 group hover:bg-muted/50"
+            className=" bento-card p-4 space-y-2 group hover:bg-muted/50  hover:bg-gray-300 dark:hover:bg-gray-700 dark:bg-gray-800"
           >
             <Link href={cert.link} key={idx} target="_blank">
-              <h3 className=" text-lg font-semibold group-hover:text-accent transition-colors">
+              <h3 className=" text-lg font-semibold group-hover:text-accent transition-colors ">
                 {/* Certification title */}
                 {cert.title}
               </h3>

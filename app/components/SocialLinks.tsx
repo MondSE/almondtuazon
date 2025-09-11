@@ -65,22 +65,6 @@ const SocialLinks = () => {
         >
           <FaDiscord size={28} />
         </a>
-        <a
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-yellow-500 transition"
-        >
-          <FaTwitch size={28} />
-        </a>
-        <a
-          href="https://www.tiktok.com/@mooncrazyyyy"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-yellow-500 transition"
-        >
-          <FaTiktok size={28} />
-        </a>
       </div>
     </motion.section>
   );

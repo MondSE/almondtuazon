@@ -39,7 +39,12 @@ const Experience = () => {
             .map((exp, idx) => (
               <div key={idx} className="dark:bg-gray-800 p-4 rounded border-1">
                 <h3 className="text-sm font-semibold">{exp.title}</h3>
-                <p className="text-sm text-yellow-400">{exp.company}</p>
+                <p
+                  className="text-sm text-yellow-500 truncate w-full"
+                  title={exp.company}
+                >
+                  {exp.company}
+                </p>
                 <div className="flex items-center justify-between mt-1">
                   <p className="text-sm dark:text-gray-300">{exp.year}</p>
 
@@ -65,7 +70,7 @@ const Experience = () => {
             className=" bg-white border-1 dark:bg-gray-900 p-6 rounded-xl max-w-md w-full grainy"
           >
             <h3 className="text-lg font-bold">{selectedExp.title}</h3>
-            <p className="text-yellow-400">{selectedExp.company}</p>
+            <p className="text-yellow-500">{selectedExp.company}</p>
             <p className="dark:text-gray-300">{selectedExp.year}</p>
             <ul className="list-disc list-inside dark:text-gray-200 mt-4 space-y-2">
               <div className="flex flex-wrap gap-2 mt-2">

@@ -26,15 +26,18 @@ const Projects = () => {
         </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-        {projects.map((proj, idx) => (
+        {projects.slice(0, 2).map((proj, idx) => (
           <div
             key={idx}
-            className="block border-1 dark:bg-gray-800 p-4 rounded hover:bg-gray-300 hover:shadow-lg transition"
+            className="block border-1 dark:bg-gray-800 p-4 rounded hover:bg-gray-300 dark:hover:bg-gray-700 hover:shadow-lg transition"
           >
             <h3 className="text-lg font-semibold dark:text-white">
               {proj.name}
             </h3>
-            <p className="text-sm dark:text-gray-300 mt-1">
+            <p
+              className="text-sm dark:text-gray-300 mt-1 truncate w-full"
+              title={proj.description} // shows full text on hover
+            >
               {proj.description}
             </p>
             <div className="flex gap-2 mt-2 flex-wrap mb-3">

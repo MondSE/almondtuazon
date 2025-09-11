@@ -87,15 +87,15 @@
     "githubLink": "https://github.com/MondSE/Laravel-Vue3-Listing-App",
     "projectSummary": " This personal project is used as a template for the demonstration of the Review Listing Content Management App of making blog, reviews, bussiness as i use the PHP, Vue3 and Sqlite database that use the framework Laravel for this simple personal project.",
     "sampleImageProject": [
-      "/asset/project/LISTING_Laravel_APP_IMG/2.png",
-      "/asset/project/LISTING_Laravel_APP_IMG/3.png",
-      "/asset/project/LISTING_Laravel_APP_IMG/1.png",
-      "/asset/project/LISTING_Laravel_APP_IMG/4.png",
-      "/asset/project/LISTING_Laravel_APP_IMG/5.png",
-      "/asset/project/LISTING_Laravel_APP_IMG/6.png",
-      "/asset/project/LISTING_Laravel_APP_IMG/7.png",
-      "/asset/project/LISTING_Laravel_APP_IMG/8.png",
-      "/asset/project/LISTING_Laravel_APP_IMG/9.png"
+      "/asset/project/LISTING_LARAVEL_APP_IMG/2.png",
+      "/asset/project/LISTING_LARAVEL_APP_IMG/3.png",
+      "/asset/project/LISTING_LARAVEL_APP_IMG/1.png",
+      "/asset/project/LISTING_LARAVEL_APP_IMG/4.png",
+      "/asset/project/LISTING_LARAVEL_APP_IMG/5.png",
+      "/asset/project/LISTING_LARAVEL_APP_IMG/6.png",
+      "/asset/project/LISTING_LARAVEL_APP_IMG/7.png",
+      "/asset/project/LISTING_LARAVEL_APP_IMG/8.png",
+      "/asset/project/LISTING_LARAVEL_APP_IMG/9.png"
     ],
     "aim": [
       "This software is to automate these processes and to improve the overall efficiency and clients experience of Office.",

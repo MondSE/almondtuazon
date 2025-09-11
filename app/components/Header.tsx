@@ -1,24 +1,42 @@
 import React from "react";
 import * as motion from "motion/react-client";
+import Image from "next/image"; // ✅ Next.js optimized image
 import headerData from "@/data/header.json";
 
 const Header = () => {
   return (
     <motion.div
-      className="flex flex-col md:flex-row items-start md:items-center justify-between py-10 md:py-10 gap-4"
+      className="flex flex-col md:flex-row items-center md:items-center justify-between py-10 gap-6"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      {headerData.map((hed, hedi) => (
-        <div key={hedi}>
-          <h1 className="text-3xl font-bold">{hed.name}</h1>
-          <p className="text-sm dark:text-gray-400 mt-1">@ {hed.location}</p>
-          <p className="text-sm dark:text-gray-400">{hed.Position}</p>
-        </div>
-      ))}
+      {/* Left side: Profile + Info */}
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
+        {/* Profile Image */}
+        <Image
+          src={headerData.profilepicture}
+          alt="Profile Photo"
+          width={120}
+          height={120}
+          className="rounded-3xl shadow-lg object-cover"
+        />
 
-      <div className="flex flex-wrap gap-3">
+        {/* Header Info */}
+        {headerData.data.map((hed, hedi) => (
+          <div key={hedi}>
+            <h1 className="text-3xl md:text-3xl font-bold">{hed.name}</h1>
+            <p className="text-sm md:text-sm dark:text-gray-400 mt-2">
+              @ {hed.location}
+            </p>
+            <p className="text-sm md:text-sm dark:text-gray-400">
+              {hed.Position}
+            </p>
+          </div>
+        ))}
+      </div>
+      {/* CV Button aligned right on desktop, below on mobile */}
+      <div className="flex flex-wrap gap-3 mt-4 md:mt-0">
         <a
           href="/asset/CV.pdf"
           download="AlmondCV.pdf"

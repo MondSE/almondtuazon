@@ -5,6 +5,7 @@ import * as motion from "motion/react-client";
 import Link from "next/link";
 import { Project } from "@/types/project";
 import Image from "next/image";
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 type Props = {
   project: Project;
@@ -80,8 +81,9 @@ export default function ProjectDetailClient({ project }: Props) {
         <motion.div variants={itemVariants}>
           <Link
             className="inline-flex items-center gap-2 text-sm text-foreground/70 hover:text-foreground transition-colors"
-            href={"/"}
+            href={"/projects/list"}
           >
+            <IoIosArrowRoundBack className=" text-4xl" />
             Back to Home
           </Link>
         </motion.div>

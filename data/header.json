@@ -1,7 +1,10 @@
-[
-  {
-    "name": "Almond Rae Tuazon",
-    "location": "Pampanga, Philippines",
-    "Position": "Full-Stack Engineer"
-  }
-]
+{
+  "profilepicture": "/asset/cv/almond.png",
+  "data": [
+    {
+      "name": "Almond Tuazon",
+      "location": "Philippines",
+      "Position": "Full Stack Developer / Computer Programmer"
+    }
+  ]
+}

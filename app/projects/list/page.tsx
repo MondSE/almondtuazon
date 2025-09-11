@@ -52,16 +52,19 @@ const projectList = () => {
           <motion.div
             variants={itemVariants}
             key={idx}
-            className=" bento-card p-4 space-y-2 group hover:bg-muted/50"
+            className=" bento-card p-4 space-y-2 group hover:bg-muted/50 hover:bg-gray-300 dark:hover:bg-gray-700 dark:bg-gray-800"
           >
             <div
               key={idx}
-              className="block p-4 rounded hover:shadow-lg transition hover:bg-gray-300"
+              className="block p-4 rounded hover:shadow-lg transition"
             >
               <h3 className="text-lg font-semibold dark:text-white">
                 {proj.name}
               </h3>
-              <p className="text-sm dark:text-gray-300 mt-1">
+              <p
+                className="text-sm dark:text-gray-300 mt-1 truncate w-full"
+                title={proj.description} // shows full text on hover
+              >
                 {proj.description}
               </p>
               <div className="flex gap-2 mt-2 flex-wrap mb-3">
