@@ -15,7 +15,9 @@ const Header = () => {
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
         {/* Profile Image */}
         <Image
-          src={headerData.profilepicture}
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${
+            headerData.profilepicture
+          }`}
           alt="Profile Photo"
           width={120}
           height={120}
