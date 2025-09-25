@@ -48,7 +48,7 @@ const Header = () => {
         <a
           href="/asset/CV.pdf"
           download="AlmondCV.pdf"
-          className="dark:bg-gray-700 dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded shadow hover:scale-105 transition-transform hover:bg-gray-300"
+          className="dark:bg-gray-700 dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded shadow hover:scale-105 transition-transform hover:bg-gray-300 dark:hover:bg-gray-500"
         >
           Download CV
         </a>

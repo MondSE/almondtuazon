@@ -50,7 +50,7 @@ const Experience = () => {
 
                   <button
                     onClick={() => setSelectedExp(exp)}
-                    className="px-3 py-1 dark:hover:bg-gray-700 dark:bg-gray-700 dark:text-white text-xs dark:border-amber-50 border-2 rounded shadow hover:scale-105 transition-transform hover:bg-gray-300"
+                    className="px-3 py-1 dark:bg-gray-700 dark:text-white text-xs dark:border-amber-50 border-2 rounded shadow hover:scale-105 transition-transform hover:bg-gray-300 dark:hover:bg-gray-500"
                   >
                     Description
                   </button>
