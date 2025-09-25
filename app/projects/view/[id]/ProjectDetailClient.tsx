@@ -84,7 +84,7 @@ export default function ProjectDetailClient({ project }: Props) {
             href={"/projects/list"}
           >
             <IoIosArrowRoundBack className=" text-4xl" />
-            Back to Home
+            Back to List
           </Link>
         </motion.div>
       </div>
@@ -281,24 +281,29 @@ export default function ProjectDetailClient({ project }: Props) {
         </ul>
 
         {/* Database Diagram */}
-        <h2 className="text-2xl lg:text-3xl font-bold mb-5">Database Design</h2>
+
         {project.dataBaseDiagram &&
           typeof project.dataBaseDiagram === "string" && (
-            <div
-              className="relative overflow-hidden rounded-xl cursor-pointer group mb-5"
-              onClick={() => {
-                setSelectedImage(withBasePath(project.dataBaseDiagram));
-                setIsFromGallery(false);
-              }}
-            >
-              <Image
-                src={withBasePath(project.dataBaseDiagram)}
-                alt="Database Diagram"
-                width={1200}
-                height={800}
-                className="object-fit transition-transform group-hover:scale-105"
-              />
-            </div>
+            <>
+              <h2 className="text-2xl lg:text-3xl font-bold mb-5">
+                Database Design
+              </h2>
+              <div
+                className="relative overflow-hidden rounded-xl cursor-pointer group mb-5"
+                onClick={() => {
+                  setSelectedImage(withBasePath(project.dataBaseDiagram));
+                  setIsFromGallery(false);
+                }}
+              >
+                <Image
+                  src={withBasePath(project.dataBaseDiagram)}
+                  alt="Database Diagram"
+                  width={1200}
+                  height={800}
+                  className="object-fit transition-transform group-hover:scale-105"
+                />
+              </div>
+            </>
           )}
 
         {/* Implementation */}
