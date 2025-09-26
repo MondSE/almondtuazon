@@ -98,8 +98,8 @@
       "/asset/project/LISTING_LARAVEL_APP_IMG/9.png"
     ],
     "aim": [
-      "This software is to automate these processes and to improve the overall efficiency and clients experience of Office.",
-      "The system is easy to use and has user-friendly functionalities to help the employee's for their daily inventory."
+      "This Web-app is to automate these processes and to improve the overall efficiency and clients experience of reviewing store, blog, food.",
+      "The system is easy to use and has user-friendly functionalities to help the client for their daily review."
     ],
     "technologiesUsed": [
       {
@@ -108,7 +108,7 @@
         "dataBase": " Sqlite to store user data, routines."
       }
     ],
-    "dataBaseDiagram": "/asset/project/PIS_IMG/db1.png",
+    "dataBaseDiagram": "/asset/project/LISTING_LARAVEL_APP_IMG/db1.png",
     "implementation": [
       {
         "frontEnd": [
@@ -124,12 +124,12 @@
   },
   {
     "id": 4,
-    "name": "RLMMC - IMS ",
+    "name": "RLMMC - MIS ",
     "description": "Rafael Lazatin Memorial Medical Center",
     "tech": ["C#", "Guna UI", "WinForm"],
     "link": "/",
-    "githubLink": "https://github.com/MondSE/Laravel-Vue3-Listing-App",
-    "projectSummary": "This personal project is used as a template for the demonstration proposal design of the Rafael Lazatin Memorial Medical Center App of a hospital medical system as i use the C#, Guna UI and WinForm for this simple personal project.",
+    "githubLink": "https://github.com/MondSE/RLMMC-MIS",
+    "projectSummary": "This personal project is used as a template for the demonstration proposal design of the Rafael Lazatin Memorial Medical Center App of a hospital medical information system as i use the C#, Guna UI and WinForm for this simple personal project.",
     "sampleImageProject": [
       "/asset/project/RLMMC_IMS_IMG/1.png",
       "/asset/project/RLMMC_IMS_IMG/2.png",
@@ -137,7 +137,7 @@
     ],
     "aim": [
       "This software is to automate these processes and to improve the overall efficiency and medical staff experience of Office.",
-      "The system is easy to use and has user-friendly functionalities to help the employee's for their daily inventory."
+      "The system is easy to use and has user-friendly functionalities to help the employee's for their daily operation."
     ],
     "technologiesUsed": [
       {
@@ -157,6 +157,42 @@
         "dataBase": [
           "Not included in the proposal as per head management of the hospital."
         ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "LRS",
+    "description": "Library Record System",
+    "tech": ["C#", "VB6", "FileMaker Pro 17"],
+    "link": "/",
+    "githubLink": "https://github.com/MondSE/Library-Management-Record",
+    "projectSummary": "This project is used as a template for the demonstration of the librarian record as comparison whether the FileMaker Pro 17 is good than VB6 both are using C#.",
+    "sampleImageProject": [
+      "/asset/project/LIBRARY_FMP_IMG/1.png",
+      "/asset/project/LIBRARY_FMP_IMG/2.png",
+      "/asset/project/LIBRARY_FMP_IMG/3.png"
+    ],
+    "aim": [
+      "This software is to automate these processes and to improve the overall efficiency and libarian staff experience of Office.",
+      "The system is easy to use and has user-friendly functionalities to help the employee's for their daily inventory."
+    ],
+    "technologiesUsed": [
+      {
+        "frontEnd": " FileMaker Pro 17 UI for the user interface.",
+        "backEnd": " C# to handle application logic and APIs.",
+        "dataBase": " FileMaker Pro 17 included in already."
+      }
+    ],
+    "dataBaseDiagram": "",
+    "implementation": [
+      {
+        "frontEnd": [
+          "Development of a clean and dynamic user for creating, editing, and viewing exercise routines.",
+          "Integration of interactive graphics to display physical progress."
+        ],
+        "backEnd": ["Implementation of endpoints for CRUD routines."],
+        "dataBase": ["FileMaker Pro 17 included in already."]
       }
     ]
   }
