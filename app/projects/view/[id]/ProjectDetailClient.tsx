@@ -11,7 +11,11 @@ type Props = {
   project: Project;
 };
 
-const basePath = process.env.NODE_ENV === "production" ? "/almondtuazon" : "";
+const isGithubPages =
+  typeof window !== "undefined" &&
+  window.location.hostname.includes("github.io");
+
+export const basePath = isGithubPages ? "/almondtuazon" : "";
 
 const withBasePath = (src: string) => {
   if (!src) return "";

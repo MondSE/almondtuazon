@@ -3,7 +3,11 @@ import * as motion from "motion/react-client";
 import Image from "next/image"; // ✅ Next.js optimized image
 import headerData from "@/data/header.json";
 
-const basePath = process.env.NODE_ENV === "production" ? "/almondtuazon" : "";
+const isGithubPages =
+  typeof window !== "undefined" &&
+  window.location.hostname.includes("github.io");
+
+export const basePath = isGithubPages ? "/almondtuazon" : "";
 
 const withBasePath = (src: string) => {
   if (!src) return "";
