@@ -50,8 +50,8 @@ const Header = () => {
       {/* CV Button aligned right on desktop, below on mobile */}
       <div className="flex flex-wrap gap-3 mt-4 md:mt-0">
         <a
-          href="/asset/CV.pdf"
-          download="AlmondCV.pdf"
+          href={withBasePath(headerData.myCV)}
+          download="AlmondTuazon-CV.pdf"
           className="dark:bg-gray-700 dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded shadow hover:scale-105 transition-transform hover:bg-gray-300 dark:hover:bg-gray-500"
         >
           Download CV
