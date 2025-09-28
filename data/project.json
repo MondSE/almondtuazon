@@ -195,5 +195,37 @@
         "dataBase": ["FileMaker Pro 17 included in already."]
       }
     ]
+  },
+  {
+    "id": 6,
+    "name": "ppb",
+    "description": "Public Photo Booth",
+    "tech": ["TypeScript", "Tailwind", "React", "NextJS"],
+    "link": "/",
+    "githubLink": "https://github.com/MondSE/photobooth",
+    "projectSummary": "This is a personal project for the demonstration of the Public Photo Booth by using NextJs framework and TypeScript",
+    "sampleImageProject": [],
+    "aim": [
+      "This Web-app is to experince a free photo booth in public.",
+      "It's easy to use and has user-friendly functionalities to help the user preview on the pictures."
+    ],
+    "technologiesUsed": [
+      {
+        "frontEnd": " React and Tailwind CSS for the user interface.",
+        "backEnd": " TypeScript to handle application logic and APIs.",
+        "dataBase": " Not included in project."
+      }
+    ],
+    "dataBaseDiagram": "",
+    "implementation": [
+      {
+        "frontEnd": [
+          "Development of a clean user experinces for take a picture and reviewing pic.",
+          "Integration of interactive graphics to display physical progress."
+        ],
+        "backEnd": ["Implementation of endpoints for Usestate on holder."],
+        "dataBase": ["Not included in project."]
+      }
+    ]
   }
 ]
