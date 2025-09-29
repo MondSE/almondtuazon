@@ -198,13 +198,16 @@
   },
   {
     "id": 6,
-    "name": "ppb",
+    "name": "PPB - WEB APP",
     "description": "Public Photo Booth",
     "tech": ["TypeScript", "Tailwind", "React", "NextJS"],
     "link": "/",
     "githubLink": "https://github.com/MondSE/photobooth",
     "projectSummary": "This is a personal project for the demonstration of the Public Photo Booth by using NextJs framework and TypeScript",
-    "sampleImageProject": [],
+    "sampleImageProject": [
+      "/asset/project/PPB_IMG/1.png",
+      "/asset/project/PPB_IMG/2.png"
+    ],
     "aim": [
       "This Web-app is to experince a free photo booth in public.",
       "It's easy to use and has user-friendly functionalities to help the user preview on the pictures."
