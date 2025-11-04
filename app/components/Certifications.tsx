@@ -9,8 +9,10 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Certifications = () => {
   const [showAll] = useState(false);
-  const displayedCerts = showAll ? certifications : certifications.slice(0, 4);
-
+  const displayedCerts = React.useMemo(() => {
+    const sorted = [...certifications].sort((a, b) => b.id - a.id);
+    return showAll ? sorted : sorted.slice(0, 4);
+  }, [showAll, certifications]);
   return (
     <motion.section
       className="bento-card p-4 col-span-1 md:col-span-3 space-y-2 group"
@@ -31,9 +33,9 @@ const Certifications = () => {
         </Link>
       </div>
       <ul className="space-y-4">
-        {displayedCerts.map((cert, idx) => (
+        {displayedCerts.map((cert) => (
           <li
-            key={idx}
+            key={cert.id}
             className="dark:bg-gray-800 p-4 border-1 rounded shadow hover:bg-gray-300 dark:hover:bg-gray-700 transition"
           >
             <Link href={cert.link} target="_blank">

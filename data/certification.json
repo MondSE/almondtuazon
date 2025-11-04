@@ -54,5 +54,12 @@
     "issuer": "TestDome",
     "year": "05-07-2023",
     "link": "https://www.testdome.com/certificates/1c8499ef94e040b98e6761b0dfdc3fe9"
+  },
+  {
+    "id": 9,
+    "title": "Responsive Web Design",
+    "issuer": "FreeCodeCamp",
+    "year": "11-05-2025",
+    "link": "https://drive.google.com/file/d/10XPYQ_Ye-m7wiLjYXepFa0ZHERaAnTLw/view"
   }
 ]
