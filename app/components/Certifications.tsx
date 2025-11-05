@@ -12,7 +12,8 @@ const Certifications = () => {
   const displayedCerts = React.useMemo(() => {
     const sorted = [...certifications].sort((a, b) => b.id - a.id);
     return showAll ? sorted : sorted.slice(0, 4);
-  }, [showAll, certifications]);
+  }, [showAll]);
+
   return (
     <motion.section
       className="bento-card p-4 col-span-1 md:col-span-3 space-y-2 group"
