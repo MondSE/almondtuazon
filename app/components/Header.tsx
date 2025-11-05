@@ -31,6 +31,7 @@ const Header = () => {
           alt="Profile Photo"
           width={120}
           height={120}
+          priority
           className="w-[9rem] h-auto rounded-3xl shadow-lg object-cover"
         />
 

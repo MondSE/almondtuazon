@@ -38,11 +38,12 @@ export default function ProjectCard({
     <div className="border dark:bg-gray-800 p-4 rounded hover:bg-gray-300 dark:hover:bg-gray-700 hover:shadow-lg transition flex flex-col sm:flex-row sm:items-start gap-4">
       {proj.sampleImageProject && proj.sampleImageProject.length > 0 && (
         <Image
-          src={proj.sampleImageProject[0]}
+          src={withBasePath(proj.sampleImageProject[0])}
           alt={proj.name}
           onClick={() => onImageClick?.(proj.sampleImageProject!)}
           width={3500} // give width & height (required for optimization)
           height={3000}
+          priority
           className="w-[8rem] h-[6rem] object-fit border-1 rounded-2xl cursor-pointer hover:opacity-75 transition mx-auto sm:mx-0 flex-shrink-0 shadow-2xl"
         />
       )}

@@ -25,7 +25,7 @@ const itemVariants = {
   transition: { duration: 1.8 },
 };
 
-const projectList = () => {
+const ProjectList = () => {
   const [showModal, setShowModal] = useState(false);
   const [currentImages, setCurrentImages] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -81,30 +81,26 @@ const projectList = () => {
           />
         ))}
 
-        {/* ✅ MODAL IMAGE SLIDESHOW */}
         {showModal && (
           <div className="fixed inset-0 bg-black/70 backdrop-blur flex items-center justify-center z-50">
             <div className="relative max-w-lg w-full p-4">
               <AnimatePresence mode="wait">
                 <motion.img
-                  key={currentImages[currentIndex]} // ✅ ensures fade triggers on change
+                  key={currentImages[currentIndex]}
                   src={currentImages[currentIndex]}
                   alt="preview"
                   className="w-full h-auto object-contain mx-auto rounded-lg"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.25 }} // ✅ smooth fade
-                  width={1200}
-                  height={800}
+                  transition={{ duration: 0.25 }}
                 />
               </AnimatePresence>
 
-              {/* Controls */}
               <button
                 onClick={prevImage}
                 className="absolute left-2 top-1/2 -translate-y-1/2 text-3xl select-none
-                    bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200"
+                bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200"
               >
                 ‹
               </button>
@@ -112,7 +108,7 @@ const projectList = () => {
               <button
                 onClick={nextImage}
                 className="absolute right-2 top-1/2 -translate-y-1/2 text-3xl select-none
-                    bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200"
+                bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200"
               >
                 ›
               </button>
@@ -120,7 +116,7 @@ const projectList = () => {
               <button
                 onClick={closeModal}
                 className="absolute top-2 right-2 text-3xl select-none
-                    bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200"
+                bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200"
               >
                 ✕
               </button>
@@ -132,4 +128,4 @@ const projectList = () => {
   );
 };
 
-export default projectList;
+export default ProjectList;
