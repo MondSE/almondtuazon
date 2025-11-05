@@ -1,11 +1,34 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import * as motion from "motion/react-client";
 import projects from "@/data/project.json";
 import Link from "next/link";
 import { VscGithubProject } from "react-icons/vsc";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import ProjectCard from "./ui/ProjectCard";
+import { AnimatePresence } from "motion/react";
 
 const Projects = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [currentImages, setCurrentImages] = useState<string[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const openModal = (images: string[]) => {
+    setCurrentImages(images);
+    setCurrentIndex(0);
+    setShowModal(true);
+  };
+
+  const closeModal = () => setShowModal(false);
+
+  const nextImage = () =>
+    setCurrentIndex((prev) => (prev + 1) % currentImages.length);
+
+  const prevImage = () =>
+    setCurrentIndex(
+      (prev) => (prev - 1 + currentImages.length) % currentImages.length
+    );
+
   return (
     <motion.section
       className="bento-card p-4 col-span-1 md:col-span-3 space-y-2 group"
@@ -25,55 +48,64 @@ const Projects = () => {
           </p>
         </Link>
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
         {projects.slice(0, 2).map((proj, idx) => (
-          <div
+          <ProjectCard
             key={idx}
-            className="block border-1 dark:bg-gray-800 p-4 rounded hover:bg-gray-300 dark:hover:bg-gray-700 hover:shadow-lg transition"
-          >
-            <h3 className="text-lg font-semibold dark:text-white">
-              {proj.name}
-            </h3>
-            <p
-              className="text-sm dark:text-gray-300 mt-1 truncate w-full"
-              title={proj.description} // shows full text on hover
-            >
-              {proj.description}
-            </p>
-            <div className="flex gap-2 mt-2 flex-wrap mb-3">
-              {proj.tech.map((tech, i) => (
-                <span
-                  key={i}
-                  className="text-xs dark:bg-gray-700 px-2 py-1 rounded dark:text-gray-200 border-1"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-            <div className="flex gap-4 mt-2">
-              <Link
-                href={`/projects/view/${idx + 1}`}
-                className=" dark:bg-gray-700 dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform hover:bg-gray-500 hover:text-white"
-              >
-                <span>Docs</span>
-              </Link>
-              {/* <Link
-                href={"#"}
-                className="bg-gray-700 dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform "
-              >
-                <span>Image</span>
-              </Link> */}
-              <Link
-                href={proj.githubLink}
-                className="dark:bg-gray-700 dark:text-white text-xs px-4 py-1 dark:border-amber-50 border-2 rounded-full shadow hover:scale-105 transition-transform hover:bg-gray-500 hover:text-white"
-                target="_blank"
-              >
-                <span>GitHub</span>
-              </Link>
-            </div>
-          </div>
+            proj={proj}
+            index={idx}
+            onImageClick={openModal}
+          />
         ))}
       </div>
+
+      {/* ✅ MODAL IMAGE SLIDESHOW */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black/70 backdrop-blur flex items-center justify-center z-50">
+          <div className="relative max-w-lg w-full p-4">
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={currentImages[currentIndex]} // ✅ ensures fade triggers on change
+                src={currentImages[currentIndex]}
+                alt="preview"
+                className="w-full h-auto object-contain mx-auto rounded-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25 }} // ✅ smooth fade
+                width={1200}
+                height={800}
+              />
+            </AnimatePresence>
+
+            {/* Controls */}
+            <button
+              onClick={prevImage}
+              className="absolute left-2 top-1/2 -translate-y-1/2 text-3xl select-none
+              bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200"
+            >
+              ‹
+            </button>
+
+            <button
+              onClick={nextImage}
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-3xl select-none
+              bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200"
+            >
+              ›
+            </button>
+
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 text-3xl select-none
+              bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </motion.section>
   );
 };
