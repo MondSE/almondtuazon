@@ -26,7 +26,7 @@ const Projects = () => {
 
   const prevImage = () =>
     setCurrentIndex(
-      (prev) => (prev - 1 + currentImages.length) % currentImages.length
+      (prev) => (prev - 1 + currentImages.length) % currentImages.length,
     );
 
   return (
@@ -50,7 +50,7 @@ const Projects = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-        {projects.slice(0, 2).map((proj, idx) => (
+        {projects.slice(-2).map((proj, idx) => (
           <ProjectCard
             key={idx}
             proj={proj}

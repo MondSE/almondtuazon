@@ -200,7 +200,7 @@
     "id": 6,
     "name": "PPB - WEB APP",
     "description": "Public Photo Booth",
-    "tech": ["TypeScript", "Tailwind", "React", "NextJS"],
+    "tech": ["React", "NextJS", "TypeScript", "Tailwind"],
     "link": "/",
     "githubLink": "https://github.com/MondSE/photobooth",
     "projectSummary": "This is a personal project for the demonstration of the Public Photo Booth by using NextJs framework and TypeScript",
