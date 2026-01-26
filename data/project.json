@@ -230,5 +230,49 @@
         "dataBase": ["Not included in project."]
       }
     ]
+  },
+  {
+    "id": 7,
+    "name": "ACTDO - IMS(version2)",
+    "description": "Information Management System for Angeles City Traffic Development Office",
+    "tech": ["Laravel", "React", "PHP", "TypeScript", "Shadcn UI", "MySQL"],
+    "link": "/",
+    "githubLink": "https://github.com/MondSE/ACTDO-IMS-DEMO",
+    "projectSummary": "This project is used as a template for the demonstration of the information management system of ACTDO Redesign as a Projects using the Laravel React and MySQL to be clear there are no ACTDO valuable data exposed to upload this template.",
+    "sampleImageProject": [
+      "/asset/project/ACTDO_IMSV2_IMG/1.png",
+      "/asset/project/ACTDO_IMSV2_IMG/2.png",
+      "/asset/project/ACTDO_IMSV2_IMG/3.png",
+      "/asset/project/ACTDO_IMSV2_IMG/4.png",
+      "/asset/project/ACTDO_IMSV2_IMG/5.png",
+      "/asset/project/ACTDO_IMSV2_IMG/6.png",
+      "/asset/project/ACTDO_IMSV2_IMG/7.png",
+      "/asset/project/ACTDO_IMSV2_IMG/8.png",
+      "/asset/project/ACTDO_IMSV2_IMG/9.png"
+    ],
+    "aim": [
+      "This software is to automate these processes and to improve the overall efficiency and clients experience of Office.",
+      "The system is easy to use and has user-friendly functionalities to help the employee's for their daily transactions."
+    ],
+    "technologiesUsed": [
+      {
+        "frontEnd": " React, Schd-Ui and Tailwind for the user interface.",
+        "backEnd": " PHP to handle application logic and APIs.",
+        "dataBase": " MySQL to store user data."
+      }
+    ],
+    "dataBaseDiagram": "/asset/project/ACTDO_IMS_IMG/db1.png",
+    "implementation": [
+      {
+        "frontEnd": [
+          "Development of a clean and dynamic user dashboard for creating, editing, and viewing exercise routines.",
+          "Integration of interactive graphics to display physical progress."
+        ],
+        "backEnd": ["Implementation of endpoints for CRUD routines."],
+        "dataBase": [
+          "Designing tables for users, exercises, and queries with normalized relationships."
+        ]
+      }
+    ]
   }
 ]
