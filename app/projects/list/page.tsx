@@ -89,13 +89,17 @@ const ProjectList = () => {
             {activeTab === tab && (
               <motion.span
                 layoutId="activeTab"
-                className="absolute inset-0 bg-black rounded-full -z-10"
+                className="absolute inset-0 bg-black rounded-full -z-10 dark:bg-white"
                 transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
               />
             )}
 
             <span
-              className={activeTab === tab ? "text-white" : "text-foreground"}
+              className={
+                activeTab === tab
+                  ? "text-white dark:text-black"
+                  : "text-foreground"
+              }
             >
               {tab} ({getCount(tab)})
             </span>

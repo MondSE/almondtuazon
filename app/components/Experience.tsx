@@ -44,7 +44,7 @@ const Experience = () => {
         </div>
         <div className="relative ml-4">
           {/* Vertical line */}
-          <div className="absolute top-0 left-2 w-0.5 bg-black h-full dark:bg-amber-50 rounded"></div>
+          <div className="absolute -left-1.5 w-0.5 bg-black h-full dark:bg-amber-50 rounded"></div>
 
           {sortedExperiences.map((exp, idx) => (
             <motion.div
@@ -55,7 +55,7 @@ const Experience = () => {
               className="relative mb-8 flex items-start group"
             >
               {/* Dot */}
-              <div className="absolute left-0 z-10 flex justify-center items-center">
+              <div className="absolute -left-3.5 z-10 flex justify-center items-center">
                 {idx === 0 ? (
                   <motion.div
                     className="w-4 h-4 bg-red-500 dark:bg-red-500 rounded-full border-2 border-white dark:border-black relative"
@@ -72,7 +72,7 @@ const Experience = () => {
               </div>
 
               {/* Card */}
-              <div className="ml-8 p-4 rounded-r-lg border bg-card/60 backdrop-blur-md shadow-lg w-full transition hover:shadow-xl hover:scale-105">
+              <div className="ml-4 p-4 rounded-r-lg border bg-card/60 backdrop-blur-md shadow-lg w-full transition hover:shadow-xl hover:scale-105">
                 <div className="flex justify-between items-start">
                   <div>
                     <h3 className="text-sm md:text-base font-semibold">
