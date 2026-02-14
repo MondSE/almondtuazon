@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "category": "ERP",
     "name": "ACTDO - IMS",
     "description": "Information Management System for Angeles City Traffic Development Office",
     "tech": ["PHP", "Bootstrap", "HTML", "CSS", "JavaScript", "SQL", "XAMPP"],
@@ -43,6 +44,7 @@
   },
   {
     "id": 2,
+    "category": "ERP",
     "name": "Local Store - PIS",
     "description": "Product Inventory System for Local Store",
     "tech": ["C++", "MySql", "WinFrom"],
@@ -80,6 +82,7 @@
   },
   {
     "id": 3,
+    "category": "Personal Project",
     "name": "RLCM",
     "description": "Review Listing Content Management",
     "tech": ["Laravel", "Vue", "PHP", "JavaScript", "Tailwind", "Sqlite"],
@@ -124,6 +127,7 @@
   },
   {
     "id": 4,
+    "category": "ERP",
     "name": "RLMMC - MIS ",
     "description": "Rafael Lazatin Memorial Medical Center",
     "tech": ["C#", "Guna UI", "WinForm"],
@@ -162,6 +166,7 @@
   },
   {
     "id": 5,
+    "category": "ERP",
     "name": "LRS",
     "description": "Library Record System",
     "tech": ["C#", "VB6", "FileMaker Pro 17"],
@@ -198,6 +203,7 @@
   },
   {
     "id": 6,
+    "category": "Personal Project",
     "name": "PPB - WEB APP",
     "description": "Public Photo Booth",
     "tech": ["React", "NextJS", "TypeScript", "Tailwind"],
@@ -233,6 +239,7 @@
   },
   {
     "id": 7,
+    "category": "ERP",
     "name": "ACTDO - IMS(version2)",
     "description": "Information Management System for Angeles City Traffic Development Office",
     "tech": ["Laravel", "React", "PHP", "TypeScript", "Shadcn UI", "MySQL"],
