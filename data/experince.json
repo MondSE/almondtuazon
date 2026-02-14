@@ -11,7 +11,7 @@
   },
   {
     "company": "City Government of Angeles (ACTDO)",
-    "title": "Data Analysis - [Office Worker II]",
+    "title": "Data Analysis",
     "year": "Oct 2017 – Jun 2020",
     "techstack": ["Excel", "Word", "PowerPoint", "MySQL"],
     "description": [
@@ -21,7 +21,7 @@
   },
   {
     "company": "City Government of Angeles (ACTDO)",
-    "title": "System Developer - [Office Worker V]",
+    "title": "System Developer",
     "year": "Jul 2020 – Dec 2022",
     "techstack": ["Html", "CSS", "JavaScript", "Php", "MySQL", "Xampp"],
     "description": [
@@ -31,7 +31,7 @@
   },
   {
     "company": "City Government of Angeles (NBI Satellite Office)",
-    "title": "IT/Data Processing - [Office Worker IV]",
+    "title": "IT/Data Processing",
     "year": "Jan 2025 - Jun 2025",
     "techstack": ["Cisco Networking", "Microsoft Server 2008", "MySQL", "Bash"],
     "description": [
