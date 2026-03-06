@@ -81,7 +81,7 @@ export default function ProjectCard({
 
         <div className="flex justify-center sm:justify-start gap-4 mt-2">
           <Link
-            href={`/projects/view/${index}`}
+            href={`/projects/view/${proj.id}`}
             className="dark:bg-gray-700 dark:text-white text-xs px-4 py-1 border-2 rounded-full shadow hover:scale-105 transition-transform hover:bg-gray-500 hover:text-white"
           >
             Docs
