@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export interface Project {
+  id: number;
   name: string;
   description: string;
   tech: string[];
@@ -80,7 +81,7 @@ export default function ProjectCard({
 
         <div className="flex justify-center sm:justify-start gap-4 mt-2">
           <Link
-            href={`/projects/view/${index + 1}`}
+            href={`/projects/view/${index}`}
             className="dark:bg-gray-700 dark:text-white text-xs px-4 py-1 border-2 rounded-full shadow hover:scale-105 transition-transform hover:bg-gray-500 hover:text-white"
           >
             Docs
