@@ -50,11 +50,10 @@ const Projects = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-        {projects.slice(-2).map((proj, idx) => (
+        {projects.slice(-2).map((proj) => (
           <ProjectCard
-            key={idx}
+            key={proj.id}
             proj={proj}
-            index={idx}
             onImageClick={openModal}
           />
         ))}
