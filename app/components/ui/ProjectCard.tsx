@@ -13,7 +13,6 @@ export interface Project {
 
 interface ProjectCardProps {
   proj: Project;
-  index: number;
   onImageClick?: (images: string[]) => void;
 }
 
@@ -31,7 +30,6 @@ const withBasePath = (src: string) => {
 
 export default function ProjectCard({
   proj,
-  index,
   onImageClick,
 }: ProjectCardProps) {
   const [showAllTech, setShowAllTech] = useState(false);
