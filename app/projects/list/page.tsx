@@ -113,7 +113,7 @@ const ProjectList = () => {
           {filteredProjects.length > 0 ? (
             [...filteredProjects]
               .sort((a, b) => b.id - a.id)
-              .map((proj, idx) => (
+              .map((proj) => (
                 <motion.div
                   key={proj.id}
                   layout
