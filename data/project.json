@@ -5,7 +5,7 @@
     "name": "ACTDO - IMS",
     "description": "Information Management System for Angeles City Traffic Development Office",
     "tech": ["PHP", "Bootstrap", "HTML", "CSS", "JavaScript", "SQL", "XAMPP"],
-    "link": "/",
+    "link": "",
     "githubLink": "https://github.com/MondSE/ACTDO-IMS-DEMO",
     "projectSummary": "This project is used as a template for the demonstration of the information management system of ACTDO as a Projects using the PHP native and Sql on Xampp to be clear there are no ACTDO valuable data exposed to upload this template.",
     "sampleImageProject": [
@@ -48,7 +48,7 @@
     "name": "Local Store - PIS",
     "description": "Product Inventory System for Local Store",
     "tech": ["C++", "MySql", "WinFrom"],
-    "link": "/",
+    "link": "",
     "githubLink": "https://github.com/MondSE/Product_Inventory_System",
     "projectSummary": "This project is used as a template for the demonstration of the Product Inventory System of Local Store as a Projects using the C++ and MySql on WinForm.",
     "sampleImageProject": [
@@ -86,7 +86,7 @@
     "name": "RLCM",
     "description": "Review Listing Content Management",
     "tech": ["Laravel", "Vue", "PHP", "JavaScript", "Tailwind", "Sqlite"],
-    "link": "/",
+    "link": "",
     "githubLink": "https://github.com/MondSE/Laravel-Vue3-Listing-App",
     "projectSummary": " This personal project is used as a template for the demonstration of the Review Listing Content Management App of making blog, reviews, bussiness as i use the PHP, Vue3 and Sqlite database that use the framework Laravel for this simple personal project.",
     "sampleImageProject": [
@@ -131,7 +131,7 @@
     "name": "RLMMC - MIS ",
     "description": "Rafael Lazatin Memorial Medical Center",
     "tech": ["C#", "Guna UI", "WinForm"],
-    "link": "/",
+    "link": "",
     "githubLink": "https://github.com/MondSE/RLMMC-MIS",
     "projectSummary": "This personal project is used as a template for the demonstration proposal design of the Rafael Lazatin Memorial Medical Center App of a hospital medical information system as i use the C#, Guna UI and WinForm for this simple personal project.",
     "sampleImageProject": [
@@ -170,7 +170,7 @@
     "name": "LRS",
     "description": "Library Record System",
     "tech": ["C#", "VB6", "FileMaker Pro 17"],
-    "link": "/",
+    "link": "",
     "githubLink": "https://github.com/MondSE/Library-Management-Record",
     "projectSummary": "This project is used as a template for the demonstration of the librarian record as comparison whether the FileMaker Pro 17 is good than VB6 both are using C#.",
     "sampleImageProject": [
@@ -207,7 +207,7 @@
     "name": "PPB - WEB APP",
     "description": "Public Photo Booth",
     "tech": ["React", "NextJS", "TypeScript", "Tailwind"],
-    "link": "/",
+    "link": "https://mondse.github.io/photobooth/",
     "githubLink": "https://github.com/MondSE/photobooth",
     "projectSummary": "This is a personal project for the demonstration of the Public Photo Booth by using NextJs framework and TypeScript",
     "sampleImageProject": [
@@ -243,7 +243,7 @@
     "name": "ACTDO - IMS(version2)",
     "description": "Information Management System for Angeles City Traffic Development Office",
     "tech": ["Laravel", "React", "PHP", "TypeScript", "Shadcn UI", "MySQL"],
-    "link": "/",
+    "link": "https://almond-dev-staging.ct.ws/",
     "githubLink": "https://github.com/MondSE/ACTDO-IMS-DEMO",
     "projectSummary": "This project is used as a template for the demonstration of the information management system of ACTDO Redesign as a Projects using the Laravel React and MySQL to be clear there are no ACTDO valuable data exposed to upload this template.",
     "sampleImageProject": [

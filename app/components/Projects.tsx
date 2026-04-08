@@ -50,13 +50,12 @@ const Projects = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-        {projects.slice(-2).map((proj) => (
-          <ProjectCard
-            key={proj.id}
-            proj={proj}
-            onImageClick={openModal}
-          />
-        ))}
+        {projects
+          .sort((a, b) => b.id - a.id)
+          .slice(0, 2)
+          .map((proj) => (
+            <ProjectCard key={proj.id} proj={proj} onImageClick={openModal} />
+          ))}
       </div>
 
       {/* ✅ MODAL IMAGE SLIDESHOW */}

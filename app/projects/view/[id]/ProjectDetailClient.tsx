@@ -129,6 +129,23 @@ export default function ProjectDetailClient({ project }: Props) {
         </div>
       </div>
 
+      {/* Live Link */}
+      {project.link?.trim() && (
+        <div className="flex flex-wrap gap-2 mb-10">
+          <p>Testing Live link:</p>
+          <div className="flex gap-1">
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pretty text-primary-100 underline wrap-anywhere"
+            >
+              {project.link}
+            </a>
+          </div>
+        </div>
+      )}
+
       {/* Summary */}
       <article className="max-w-[65ch] mb-20">
         <h2 className="text-2xl lg:text-3xl font-bold mb-3">Project Summary</h2>
@@ -200,8 +217,8 @@ export default function ProjectDetailClient({ project }: Props) {
                             setCurrentIndex(newIndex);
                             setSelectedImage(
                               withBasePath(
-                                project.sampleImageProject![newIndex]
-                              )
+                                project.sampleImageProject![newIndex],
+                              ),
                             );
                           }
                         }}
@@ -224,8 +241,8 @@ export default function ProjectDetailClient({ project }: Props) {
                             setCurrentIndex(newIndex);
                             setSelectedImage(
                               withBasePath(
-                                project.sampleImageProject![newIndex]
-                              )
+                                project.sampleImageProject![newIndex],
+                              ),
                             );
                           }
                         }}
@@ -316,7 +333,7 @@ export default function ProjectDetailClient({ project }: Props) {
           <h3 className="font-semibold">Frontend:</h3>
           <ul className="list-disc list-inside ml-4">
             {project.implementation?.[0]?.frontEnd?.map(
-              (item: string, index: number) => <li key={index}>{item}</li>
+              (item: string, index: number) => <li key={index}>{item}</li>,
             ) || <li>Not specified</li>}
           </ul>
         </div>
@@ -324,7 +341,7 @@ export default function ProjectDetailClient({ project }: Props) {
           <h3 className="font-semibold">Backend:</h3>
           <ul className="list-disc list-inside ml-4">
             {project.implementation?.[0]?.backEnd?.map(
-              (item: string, index: number) => <li key={index}>{item}</li>
+              (item: string, index: number) => <li key={index}>{item}</li>,
             ) || <li>Not specified</li>}
           </ul>
         </div>
@@ -332,7 +349,7 @@ export default function ProjectDetailClient({ project }: Props) {
           <h3 className="font-semibold">Database:</h3>
           <ul className="list-disc list-inside ml-4">
             {project.implementation?.[0]?.dataBase?.map(
-              (item: string, index: number) => <li key={index}>{item}</li>
+              (item: string, index: number) => <li key={index}>{item}</li>,
             ) || <li>Not specified</li>}
           </ul>
         </div>

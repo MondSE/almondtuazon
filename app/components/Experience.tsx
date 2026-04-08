@@ -119,12 +119,12 @@ const Experience = () => {
               className="relative w-full max-w-lg rounded-2xl border bg-background/95 backdrop-blur-xl p-6 shadow-2xl"
             >
               {/* CLOSE */}
-              <button
+              {/* <button
                 onClick={() => setSelectedExp(null)}
                 className="absolute top-3 right-3 p-2 rounded-full hover:bg-muted transition"
               >
                 <IoMdCloseCircleOutline size={18} />
-              </button>
+              </button> */}
 
               {/* HEADER */}
               <h3 className="text-lg font-bold">{selectedExp.title}</h3>
