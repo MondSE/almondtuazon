@@ -116,18 +116,21 @@ export default function ProjectDetailClient({ project }: Props) {
       </div>
 
       {/* GitHub Link */}
-      <div className="flex flex-wrap gap-2 mb-10">
-        <p>GitHub:</p>
-        <div className="flex gap-1">
-          <a
-            href={project.githubLink}
-            target="_blank"
-            className="text-pretty text-primary-100 underline wrap-anywhere"
-          >
-            {project.githubLink}
-          </a>
+      {project.githubLink?.trim() && (
+        <div className="flex flex-wrap gap-2 mb-10">
+          <p>GitHub:</p>
+          <div className="flex gap-1">
+            <a
+              href={project.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pretty text-primary-100 underline wrap-anywhere"
+            >
+              {project.githubLink}
+            </a>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Live Link */}
       {project.link?.trim() && (

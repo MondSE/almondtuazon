@@ -281,5 +281,70 @@
         ]
       }
     ]
+  },
+  {
+    "id": 8,
+    "category": "Personal Project",
+    "name": "TSMA",
+    "description": "Ticketing System Management Application",
+    "tech": [
+      "Laravel",
+      "React",
+      "PHP",
+      "TypeScript",
+      "Shadcn UI",
+      "Tailwind CSS",
+      "MySQL"
+    ],
+    "link": "https://mon-testing.gt.tc/",
+    "githubLink": "",
+    "projectSummary": "This project is a Ticketing System Management Application designed to streamline the process of handling support requests, issues, and internal/external tickets within an organization. The system allows users to create, track, and manage tickets efficiently while enabling administrators and staff to respond, update, and resolve issues in real time. This project serves as a modern full-stack application demo using Laravel, React, and MySQL, showcasing best practices in system design, authentication, and role-based access control.",
+    "sampleImageProject": [
+      "/asset/project/TSA_IMG/1.png",
+      "/asset/project/TSA_IMG/2.png",
+      "/asset/project/TSA_IMG/3.png",
+      "/asset/project/TSA_IMG/4.png",
+      "/asset/project/TSA_IMG/5.png",
+      "/asset/project/TSA_IMG/6.png",
+      "/asset/project/TSA_IMG/7.png",
+      "/asset/project/TSA_IMG/8.png"
+    ],
+    "aim": [
+      "Submit and manage support tickets.",
+      "Track ticket status (Open, Pending, Resolved, Closed)",
+      "Improve communication between users and support staff",
+      "Organize and prioritize issues efficiently",
+      "Enhance overall workflow and response time",
+      "This software automates manual processes and improves the overall efficiency and user experience of handling service requests.",
+      "The system is designed to be user-friendly, ensuring that employees and administrators can easily perform their daily operations."
+    ],
+    "technologiesUsed": [
+      {
+        "frontEnd": " React, Shadcn UI, Tailwind CSS Used to build a responsive, modern, and interactive user interface.",
+        "backEnd": " Laravel (PHP Framework) Handles business logic, API endpoints, authentication, and data processing.",
+        "dataBase": " MySQL Stores user accounts, tickets, messages, and system data with structured relationships."
+      }
+    ],
+    "dataBaseDiagram": "/asset/project/TSA_IMG/db1.png",
+    "implementation": [
+      {
+        "frontEnd": [
+          "Developed a clean dashboard for users and admins",
+          "Ticket creation, editing, and viewing interface",
+          "Status badges and filtering system",
+          "Responsive UI for desktop and mobile"
+        ],
+        "backEnd": [
+          "RESTful API endpoints for ticket management",
+          "Authentication and role-based authorization",
+          "CRUD operations for tickets and users",
+          "Email notifications (optional feature)"
+        ],
+        "dataBase": [
+          "Structured relational tables for efficient querying",
+          "Indexed fields for performance optimization"
+        ]
+      }
+    ]
   }
 ]
